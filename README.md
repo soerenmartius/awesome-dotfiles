@@ -106,6 +106,8 @@ GIT_AUTHOR_EMAIL="soeren.martius@gmail.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 git config --global core.fileMode false
+git config --global user.signingkey YOURGPGKEYID
+
 ```
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably
