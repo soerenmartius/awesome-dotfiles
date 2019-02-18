@@ -30,7 +30,7 @@ export MANPAGER='less';
 export GPG_TTY=$(tty);
 
 # GoLang
-export GOPATH="$HOME/Sites/Golang" # you might want to consider to change this
+export GOPATH="$HOME/projects/golang" # you might want to consider to change this
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
