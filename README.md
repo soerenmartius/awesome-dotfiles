@@ -1,4 +1,4 @@
-# Soeren’s dotfiles
+# :hatching_chick: awesome dotfiles
 
 ![Screenshot of my shell prompt](https://i.imgur.com/zy0bLDG.png)
 

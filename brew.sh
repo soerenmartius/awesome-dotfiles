@@ -112,6 +112,10 @@ brew install telnet
 brew install terraform
 brew install terragrunt
 
+# Java 11
+brew tap homebrew/cask-versions
+brew cask install java
+
 # casks
 brew cask install aws-vault
 brew cask install font-hack-nerd-font
