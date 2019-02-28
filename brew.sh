@@ -111,7 +111,6 @@ brew install rsync
 brew install telnet
 brew install terraform
 brew install terragrunt
-brew install rustup
 
 # Java 11
 brew tap homebrew/cask-versions
