@@ -111,10 +111,14 @@ brew install rsync
 brew install telnet
 brew install terraform
 brew install terragrunt
+brew install semaphoreci/tap/sem # semaphore ci
 
 # Java 11
 brew tap homebrew/cask-versions
 brew cask install java
+
+# Spectacle
+brew cask install spectacle
 
 # casks
 brew cask install aws-vault
