@@ -52,3 +52,6 @@ for file in ~/.{theme,path,exports,aliases,functions,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+# get direnv working with zsh https://github.com/direnv/direnv/issues/64
+eval "$(direnv hook $SHELL)"

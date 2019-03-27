@@ -160,7 +160,3 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # HUB
 alias git='/usr/bin/env hub'
-
-# PYTHON & PIP
-alias python='/usr/bin/env python3'
-alias pip='/usr/bin/env pip3'

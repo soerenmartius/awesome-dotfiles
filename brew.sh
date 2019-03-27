@@ -112,6 +112,8 @@ brew install telnet
 brew install terraform
 brew install terragrunt
 brew install semaphoreci/tap/sem # semaphore ci
+brew cask install miniconda      # python miniconda
+brew install direnv              # direnv for managing .envrc based environments
 
 # Java 11
 brew tap homebrew/cask-versions
