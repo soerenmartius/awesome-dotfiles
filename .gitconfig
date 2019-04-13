@@ -15,6 +15,9 @@
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule update --recursive --remote"
 
+	# Pull current branch updates from remove
+	pb = !"git pull origin $(git rev-parse --abbrev-ref HEAD)"
+
 	# Clone a repository including all submodules
 	c = clone --recursive
 
