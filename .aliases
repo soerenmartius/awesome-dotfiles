@@ -57,7 +57,7 @@ alias sudo='sudo '
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; mas upgrade; brew cleanup; sudo gem update --system -n /usr/local/bin; sudo gem update -n /usr/local/bin; sudo gem cleanup'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; mas upgrade; brew cleanup; gem update --system -n /usr/local/bin; gem update -n /usr/local/bin; gem cleanup'
 
 # Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
