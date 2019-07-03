@@ -114,6 +114,7 @@ brew install terragrunt
 brew install semaphoreci/tap/sem # semaphore ci
 brew cask install miniconda      # python miniconda
 brew install direnv              # direnv for managing .envrc based environments
+brew install websocat            # websocat
 
 # Java 11
 brew tap homebrew/cask-versions
