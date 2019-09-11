@@ -12,7 +12,7 @@ alias -- -="cd -"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
-alias g="git"
+alias g="hub"
 
 # Verbose output for rm, cp and mv
 alias rm="rm -v"

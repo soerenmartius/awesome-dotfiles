@@ -115,6 +115,7 @@ brew install semaphoreci/tap/sem # semaphore ci
 brew cask install miniconda      # python miniconda
 brew install direnv              # direnv for managing .envrc based environments
 brew install websocat            # websocat
+brew install ripgrep             # ripgrep recursively searches directories for a regex pattern
 
 # Java 11
 brew tap homebrew/cask-versions

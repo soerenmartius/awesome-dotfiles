@@ -63,6 +63,10 @@
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
+	# Remove all local branches except master
+	# a.k.a. 'delete merged'
+	da = "!git branch | grep -v "master" | xargs git branch -D"
+
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
 
