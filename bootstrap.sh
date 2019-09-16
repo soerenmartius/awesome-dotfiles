@@ -28,10 +28,10 @@ function doIt() {
 		-avh $1 --no-perms . ~;
 }
 
-if [ "$1" == "--dry-run" -o "$1" == "-n" ]; then
+if [[ "$1" == "--dry-run" && "$1" == "-n" ]]; then
 	echo "The following files will be overwritten in your home directory:";
 	doIt $1;
-elif [ "$1" == "--force" -o "$1" == "-f" ]; then
+elif [[ "$1" == "--force" && "$1" == "-f" ]]; then
 	doIt;
 	echo "Files installed. Please run source ~/.zshrc to load your settings.";
 else

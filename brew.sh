@@ -99,6 +99,7 @@ brew install peco
 # Development
 brew install ansible
 brew install awscli
+brew install direnv              # direnv for managing .envrc based environments
 brew install go
 brew install htop
 brew install hub
@@ -111,9 +112,9 @@ brew install rsync
 brew install telnet
 brew install terraform
 brew install terragrunt
+brew install tmate               # https://tmate.io/ Instant terminal sharing
 brew install semaphoreci/tap/sem # semaphore ci
-brew cask install miniconda      # python miniconda
-brew install direnv              # direnv for managing .envrc based environments
+brew cask    install miniconda      # python miniconda
 brew install websocat            # websocat
 brew install ripgrep             # ripgrep recursively searches directories for a regex pattern
 
