@@ -99,6 +99,7 @@ brew install peco
 # Development
 brew install ansible
 brew install awscli
+brew install protobuf
 brew install direnv              # direnv for managing .envrc based environments
 brew install go
 brew install htop
