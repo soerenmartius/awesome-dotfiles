@@ -104,6 +104,7 @@ brew install direnv              # direnv for managing .envrc based environments
 brew install go
 brew install htop
 brew install hub
+brew install jq
 brew install openssl
 brew install packer
 brew install pre-commit
