@@ -34,3 +34,5 @@ export GOPATH="$HOME/projects/golang" # you might want to consider to change thi
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+# Postgres Tools
+export PATH="/usr/local/opt/libpq/bin:$PATH"

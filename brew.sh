@@ -119,6 +119,7 @@ brew install semaphoreci/tap/sem # semaphore ci
 brew cask    install miniconda      # python miniconda
 brew install websocat            # websocat
 brew install ripgrep             # ripgrep recursively searches directories for a regex pattern
+brew install libpq               # install postgres tools without installing full postgres
 
 # Java 11
 brew tap homebrew/cask-versions
