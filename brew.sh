@@ -120,6 +120,7 @@ brew cask    install miniconda      # python miniconda
 brew install websocat            # websocat
 brew install ripgrep             # ripgrep recursively searches directories for a regex pattern
 brew install libpq               # install postgres tools without installing full postgres
+brew install elixir              # elixir programming language
 
 # Java 11
 brew tap homebrew/cask-versions
