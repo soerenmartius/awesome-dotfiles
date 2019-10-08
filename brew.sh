@@ -126,6 +126,10 @@ brew install elixir              # elixir programming language
 brew tap homebrew/cask-versions
 brew cask install java
 
+# Displayplacer https://github.com/jakehilborn/displayplacer
+brew tap jakehilborn/jakehilborn
+brew install displayplacer
+
 # Spectacle
 brew cask install spectacle
 
