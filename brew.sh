@@ -95,6 +95,7 @@ brew install wrk
 brew install sslscan
 brew install tmux
 brew install peco
+brew install gs
 
 # Development
 brew install ansible
@@ -138,7 +139,6 @@ brew cask install spectacle
 # casks
 brew cask install aws-vault
 brew cask install font-hack-nerd-font
-brew cask install time-out
 
 # Remove outdated versions from the cellar.
 brew cleanup
