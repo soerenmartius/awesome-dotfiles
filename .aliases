@@ -152,5 +152,8 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# HUB
+# Use Hub instead of Git
 alias git='/usr/bin/env hub'
+
+# Delete all excited Containers and their Volumes
+alias dre='/usr/local/bin/docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs /usr/local/bin/docker rm -fv'
