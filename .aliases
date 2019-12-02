@@ -150,10 +150,10 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
+alias path="echo -e ${PATH//:/\\n}"
 
 # Use Hub instead of Git
-alias git='/usr/bin/env hub'
+alias git="/usr/bin/env hub"
 
 # Delete all excited Containers and their Volumes
-alias dre='/usr/local/bin/docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs /usr/local/bin/docker rm -fv'
+alias dre="/usr/local/bin/docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs /usr/local/bin/docker rm -fv"
