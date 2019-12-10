@@ -120,6 +120,8 @@ brew install websocat            # websocat
 brew install ripgrep             # ripgrep recursively searches directories for a regex pattern
 brew install libpq               # install postgres tools without installing full postgres
 brew install elixir              # elixir programming language
+brew install kubectl             # kubernetes cli
+brew install helm                # helm kubernetes package manager
 
 # miniconda python environment manager
 brew cask install miniconda
