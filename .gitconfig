@@ -13,7 +13,7 @@
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
 	# Pull in remote changes for the current repository and all its submodules
-	p = git pull --recurse-submodules
+	p = pull --recurse-submodules
 
 	# Pull current branch updates from remove
 	pb = !"git pull origin $(git rev-parse --abbrev-ref HEAD)"
@@ -24,8 +24,12 @@
 	# Commit all changes
 	ca = !git add -A && git commit -av
 
+	# Compare two branches and show which commits are not in the first
+	# but in the second branch
+	compare = "!f() { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative $1..$2; }; f"
+
 	# Switch to a branch, creating it if necessary
-	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	go = "!f() { git checkout \"$1\" 2> /dev/null || git checkout -b \"$1\"; }; f"
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
@@ -62,6 +66,9 @@
 	# Remove branches that have already been merged with master
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+	# Remove stale branches that are gone on remote
+	dg = "!git branch -vv | grep ': gone]'|  grep -v '\\*' | awk '{ print $1; }' | xargs -I F git branch -D \"F\""
 
 	# Remove all local branches except master
 	# a.k.a. 'delete merged'

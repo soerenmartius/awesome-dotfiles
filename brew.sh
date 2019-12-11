@@ -2,6 +2,9 @@
 
 # Install command-line tools using Homebrew.
 
+# Turn off analytics
+brew analytics o
+
 # Make sure we’re using the latest Homebrew.
 brew update
 
@@ -79,7 +82,7 @@ brew install xz
 brew install ack
 brew install git
 brew install git-lfs
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install lynx
 brew install p7zip
 brew install pigz
