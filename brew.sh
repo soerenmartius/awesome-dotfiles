@@ -116,7 +116,6 @@ brew install python3
 brew install readline
 brew install rsync
 brew install telnet
-brew install terragrunt
 brew install tmate               # https://tmate.io/ Instant terminal sharing
 brew install semaphoreci/tap/sem # semaphore ci
 brew install websocat            # websocat
@@ -140,8 +139,10 @@ brew install displayplacer
 # Spectacle
 brew cask install spectacle
 
-# install terraform
+# install terraform & terraform tools
 brew install warrensbox/tap/tfswitch && tfswitch 0.12.17
+brew install terragrunt
+brew install tflint
 
 # casks
 brew cask install aws-vault
