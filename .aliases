@@ -154,5 +154,11 @@ alias path="echo -e ${PATH//:/\\n}"
 # Use Hub instead of Git
 alias git="/usr/bin/env hub"
 
-# Delete all excited Containers and their Volumes
+# Delete all excited Docker Containers and their Volumes
 alias dre="/usr/local/bin/docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs /usr/local/bin/docker rm -fv"
+
+# Delete all Docker Containers and their Volumes
+alias dra="/usr/local/bin/docker ps -aq | xargs /usr/local/bin/docker rm -fv"
+
+# Delete all Docker Images
+alias drai="/usr/local/bin/docker images -aq | xargs /usr/local/bin/docker rmi"
