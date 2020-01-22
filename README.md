@@ -44,10 +44,10 @@ You can clone the repository wherever you want. (I like to keep it in `~/Project
 symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
-git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source bootstrap.sh
+git clone https://github.com/soerenmartius/awesome-dotfiles.git && cd awesome-dotfiles && source bootstrap.sh
 ```
 
-To update, `cd` into your local `dotfiles` repository and then:
+To update, `cd` into your local `awesome-dotfiles` repository and then:
 
 ```bash
 source bootstrap.sh
@@ -74,7 +74,7 @@ set -- -n; source bootstrap.sh
 To install these dotfiles without Git:
 
 ```bash
-cd; curl -#L https://github.com/mathiasbynens/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,.osx,LICENSE-MIT.txt}
+cd; curl -#L https://github.com/soerenmartius/awesome-dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,.osx,LICENSE}
 ```
 
 To update later on, just run that command again.
