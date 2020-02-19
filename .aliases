@@ -164,7 +164,7 @@ alias dra="/usr/local/bin/docker ps -aq | xargs /usr/local/bin/docker rm -fv"
 alias drai="/usr/local/bin/docker images -aq | xargs /usr/local/bin/docker rmi"
 
 # Recurively delete all Terraform state & cache files
-alias datf="find . -name .terraform -o -name terraform.tfstate* | xargs rm -rf"
+alias datf="find . -name .terraform -o -name terraform.tfstate -o -name terraform.tfstate.backup | xargs rm -rfv"
 
 # Recurively delete all Terragrunt state & cache files
-alias datgf="find . -name .terraform -o -name terraform.tfstate* | xargs rm -rf"
+alias datgf="find . -name .terragrunt-cache | xargs rm -rfv"
