@@ -125,7 +125,11 @@ brew install elixir              # elixir programming language
 brew install kubectl             # kubernetes cli
 brew install helm                # helm kubernetes package manager
 
-# miniconda python environment manager
+# Golangci-lint
+brew install golangci/tap/golangci-lint
+brew upgrade golangci/tap/golangci-lint
+
+# Miniconda python environment manager
 brew cask install miniconda
 
 # Java 11
@@ -139,12 +143,12 @@ brew install displayplacer
 # Spectacle
 brew cask install spectacle
 
-# install terraform & terraform tools
+# Install terraform & terraform tools
 brew install warrensbox/tap/tfswitch && tfswitch 0.12.17
 brew install terragrunt
 brew install tflint
 
-# casks
+# Casks
 brew cask install aws-vault
 brew cask install font-hack-nerd-font
 
