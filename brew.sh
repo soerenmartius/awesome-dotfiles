@@ -125,6 +125,8 @@ brew install elixir              # elixir programming language
 brew install kubectl             # kubernetes cli
 brew install helm                # helm kubernetes package manager
 
+brew cask install ngrok          # ngrok secure introspectable tunnels to localhost
+
 # Golangci-lint
 brew install golangci/tap/golangci-lint
 brew upgrade golangci/tap/golangci-lint
