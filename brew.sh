@@ -142,6 +142,10 @@ brew cask install java
 brew tap jakehilborn/jakehilborn
 brew install displayplacer
 
+# Footloose https://github.com/weaveworks/footloose
+brew tap weaveworks/tap
+brew install weaveworks/tap/footloose
+
 # Spectacle
 brew cask install spectacle
 
