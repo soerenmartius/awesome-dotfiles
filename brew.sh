@@ -150,12 +150,17 @@ brew install weaveworks/tap/footloose
 brew cask install spectacle
 
 # Install terraform & terraform tools
-brew install warrensbox/tap/tfswitch && tfswitch 0.12.17
+brew install warrensbox/tap/tfswitch
 brew install terragrunt
 brew install tflint
 
-# Casks
+# Packetsender
+brew cask install packetsender
+
+# Aws-vault
 brew cask install aws-vault
+
+# Nerds-font
 brew cask install font-hack-nerd-font
 
 # Remove outdated versions from the cellar.
