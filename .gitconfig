@@ -54,6 +54,11 @@
 	# Find branches containing commit
 	fb = "!f() { git branch -a --contains $1; }; f"
 
+	# Fixup commits produce commits that fix a specific commit in history by appending a commit with message fixup!
+	# An interactive rebase with --autosquash option will then merge the original commit and the fixup into a
+	# new commit and rebase the subsequent commits.
+	fix = "!f() { !git commit -a --fixup $1 && git rebase --autosquash --interactive master }"
+
 	# Find tags containing commit
 	ft = "!f() { git describe --always --contains $1; }; f"
 

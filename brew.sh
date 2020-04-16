@@ -103,6 +103,7 @@ brew install gs
 # Development
 brew install ansible
 brew install awscli
+brew install asdf
 brew install protobuf
 brew install direnv              # direnv for managing .envrc based environments
 brew install go
@@ -150,7 +151,6 @@ brew install weaveworks/tap/footloose
 brew cask install spectacle
 
 # Install terraform & terraform tools
-brew install warrensbox/tap/tfswitch
 brew install terragrunt
 brew install tflint
 
