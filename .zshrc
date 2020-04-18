@@ -38,9 +38,6 @@ EOPLUGINS
   # theme
   zgen load bhilburn/powerlevel9k powerlevel9k
 
-  # nvm node version manager https://github.com/nvm-sh/nvm
-  zgen load lukechilds/zsh-nvm
-
   # generate the init script from plugins above
   zgen save
 fi

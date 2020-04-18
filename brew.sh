@@ -100,6 +100,9 @@ brew install tmux
 brew install peco
 brew install gs
 
+# Make your DNS queries safer by encrypting them with DNS-over-HTTPS and dnscrypt-proxy
+brew install dnscrypt-proxy
+
 # Development
 brew install ansible
 brew install awscli
