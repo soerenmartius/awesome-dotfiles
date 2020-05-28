@@ -3,7 +3,7 @@
 # Install command-line tools using Homebrew.
 
 # Turn off analytics
-brew analytics o
+brew analytics off
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -101,14 +101,17 @@ brew install peco
 brew install gs
 
 # Make your DNS queries safer by encrypting them with DNS-over-HTTPS and dnscrypt-proxy
-brew install dnscrypt-proxy
+brew install dnscrypt-proxy && networksetup -setdnsservers Wi-Fi 127.0.0.1 1.1.1.1 8.8.8.8 8.8.4.4
+sudo cp -fv /usr/local/opt/dnscrypt-proxy/*.plist /Library/LaunchDaemons
+sudo chown root /Library/LaunchDaemons/homebrew.mxcl.dnscrypt-proxy.plist
+sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnscrypt-proxy.plist
 
 # Development
 brew install ansible
 brew install awscli
 brew install asdf
 brew install protobuf
-brew install direnv              # direnv for managing .envrc based environments
+brew install direnv # direnv for managing .envrc based environments
 brew install go
 brew install htop
 brew install hub
@@ -128,8 +131,10 @@ brew install libpq               # install postgres tools without installing ful
 brew install elixir              # elixir programming language
 brew install kubectl             # kubernetes cli
 brew install helm                # helm kubernetes package manager
+brew install shellcheck          # shellcheck shell/bash linter
+brew install yamllint            # yamllint YAML linter
 
-brew cask install ngrok          # ngrok secure introspectable tunnels to localhost
+brew cask install ngrok # ngrok secure introspectable tunnels to localhost
 
 # Golangci-lint
 brew install golangci/tap/golangci-lint
