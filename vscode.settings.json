@@ -3,6 +3,7 @@
 	"workbench.colorTheme": "Community Material Theme",
 	"editor.formatOnSave": true,
 	"files.autoSave": "onFocusChange",
+	"terminal.integrated.fontFamily": "Meslo LG L DZ for Powerline",
 	"workbench.startupEditor": "none",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"git.autofetch": true,
