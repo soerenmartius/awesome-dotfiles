@@ -1,0 +1,58 @@
+{
+	"window.zoomLevel": 0,
+	"workbench.colorTheme": "Community Material Theme",
+	"editor.formatOnSave": true,
+	"files.autoSave": "onFocusChange",
+	"workbench.startupEditor": "none",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"git.autofetch": true,
+	"terraform.format": {},
+	"colorize.colorize_only_visible_beta": true,
+	"colorize.colorized_colors": ["BROWSERS_COLORS", "HEXA", "RGB", "HSL"],
+	"colorize.colorized_variables": ["SASS", "CSS", "LESS", "STYLUS"],
+	"colorize.exclude": [
+		"**/.git",
+		"**/.svn",
+		"**/.hg",
+		"**/CVS",
+		"**/.DS_Store",
+		"**/.git",
+		"**/node_modules",
+		"**/bower_components",
+		"**/tmp",
+		"**/dist",
+		"**/tests"
+	],
+	"colorize.languages": [
+		"css",
+		"sass",
+		"scss",
+		"less",
+		"postcss",
+		"sss",
+		"stylus",
+		"xml",
+		"svg",
+		"javascript"
+	],
+	"bracket-pair-colorizer-2.excludedLanguages": [],
+	"files.insertFinalNewline": true,
+	"terraform.indexing": {
+		"enabled": false,
+		"liveIndexing": false,
+		"delay": 500,
+		"exclude": [".terraform/**/*", "**/.terraform/**/*"]
+	},
+	"terraform.languageServer": {
+		"installCommonProviders": true,
+		"enabled": true,
+		"args": []
+	},
+	"editor.rulers": [120],
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 120,
+	"vim.textwidth": 120,
+	"todo-tree.tree.showScanModeButton": false,
+	"go.useLanguageServer": true,
+	"markdown.extension.toc.levels": "2..6"
+}
