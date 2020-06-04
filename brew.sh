@@ -52,7 +52,7 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
+# Install some CTF tools; see https://github.com/ctfs/write-ups-2017.
 brew install aircrack-ng
 brew install bfg
 brew install binutils
@@ -133,12 +133,12 @@ brew install kubectl             # kubernetes cli
 brew install helm                # helm kubernetes package manager
 brew install shellcheck          # shellcheck shell/bash linter
 brew install yamllint            # yamllint YAML linter
+brew install github/gh/gh        # github cli
 
 brew cask install ngrok # ngrok secure introspectable tunnels to localhost
 
 # Golangci-lint
 brew install golangci/tap/golangci-lint
-brew upgrade golangci/tap/golangci-lint
 
 # Miniconda python environment manager
 brew cask install miniconda
