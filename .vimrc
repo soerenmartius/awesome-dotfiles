@@ -114,3 +114,5 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+" Map as command to exit insert mode
+imap jj <Esc>
