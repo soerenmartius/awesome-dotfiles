@@ -100,12 +100,6 @@ brew install tmux
 brew install peco
 brew install gs
 
-# Make your DNS queries safer by encrypting them with DNS-over-HTTPS and dnscrypt-proxy
-brew install dnscrypt-proxy && networksetup -setdnsservers Wi-Fi 127.0.0.1 1.1.1.1 8.8.8.8 8.8.4.4
-sudo cp -fv /usr/local/opt/dnscrypt-proxy/*.plist /Library/LaunchDaemons
-sudo chown root /Library/LaunchDaemons/homebrew.mxcl.dnscrypt-proxy.plist
-sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnscrypt-proxy.plist
-
 # Development
 brew install ansible
 brew install awscli

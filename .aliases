@@ -170,4 +170,4 @@ alias datf="find . -name .terraform -o -name terraform.tfstate -o -name terrafor
 alias datgf="find . -name .terragrunt-cache | xargs rm -rfv"
 
 # Test dnscrypt
-alias dnscrypt-test="dig TXT debug.dnscrypt.info"
+alias dnscrypt-test="sudo lsof -i :5355 && sudo lsof -i :53 && dig TXT debug.dnscrypt.info"

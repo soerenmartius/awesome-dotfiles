@@ -10,27 +10,27 @@ I use [iTerm](https://www.iterm2.com/), [oh-my-zsh](https://github.com/robbyruss
 
 ## What's included
 
-| File | Puporse |
-|---|---|
-| [.aliases](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.aliases) | A collection of useful aliases. |
-| [.curlrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.curlrc) | Some basic settings for curl such like hiding curl as  an user agent. |
-| [.editorconfig](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.editorconfig) | Consistent coding styles between different editors and IDE. |
-| [.exports](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.exports) | Consistent coding styles between different editors and IDE. |
-| [.extra](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.extra) | Everything extra you want to set. I use it for personal settings which i don't want to check in. |
-| [.functions](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.functions) | Functions to be used by aliases. |
-| [.gdbinit](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.dgbinit) | Settings for the DGB Debugger. |
-| [.gitconfig](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.gitconfig) | Git configuration settings. |
-| [.gvimrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.gvimrc) | Settings for VIM GUI. |
-| [.inputrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.inputrc) | Readline configuration. |
-| [.macos](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.macos) | MacOS configuration and useful settings. |
-| [.screenrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.screenrc) | Screen configuration. |
-| [.theme](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.theme) | Settings for our oh-my-zsh theme. |
-| [.tmux.conf](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.tmux.conf) | Tmux configuration. |
-| [.vimrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.vimrc) | Vim editor configuration for inside the terminal. |
-| [.wgetrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.wgetrc) | Wget configuration. |
-| [.zshrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.zshrc) | ZSH configuration. This loads the zgen plugin manager and oh-my-zsh with it's plugins |
-| [bootstrap.sh](https://github.com/soerenmartius/awesome-dotfiles/blob/master/bootstrap.sh) | Install script. Copies all dotfiles to your $HOME directory |
-
+| File                                                                                                 | Puporse                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| [.aliases](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.aliases)                   | A collection of useful aliases.                                                                  |
+| [.curlrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.curlrc)                     | Some basic settings for curl such like hiding curl as  an user agent.                            |
+| [.editorconfig](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.editorconfig)         | Consistent coding styles between different editors and IDE.                                      |
+| [.exports](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.exports)                   | Consistent coding styles between different editors and IDE.                                      |
+| [.extra](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.extra)                       | Everything extra you want to set. I use it for personal settings which i don't want to check in. |
+| [.functions](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.functions)               | Functions to be used by aliases.                                                                 |
+| [.gdbinit](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.dgbinit)                   | Settings for the DGB Debugger.                                                                   |
+| [.gitconfig](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.gitconfig)               | Git configuration settings.                                                                      |
+| [.gvimrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.gvimrc)                     | Settings for VIM GUI.                                                                            |
+| [.inputrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.inputrc)                   | Readline configuration.                                                                          |
+| [.macos](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.macos)                       | MacOS configuration and useful settings.                                                         |
+| [.screenrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.screenrc)                 | Screen configuration.                                                                            |
+| [.theme](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.theme)                       | Settings for our oh-my-zsh theme.                                                                |
+| [.tmux.conf](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.tmux.conf)               | Tmux configuration.                                                                              |
+| [.vimrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.vimrc)                       | Vim editor configuration for inside the terminal.                                                |
+| [.wgetrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.wgetrc)                     | Wget configuration.                                                                              |
+| [.zshrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.zshrc)                       | ZSH configuration. This loads the zgen plugin manager and oh-my-zsh with it's plugins            |
+| [install-dnssec.sh](https://github.com/soerenmartius/awesome-dotfiles/blob/master/install-dnssec.sh) | Install script for setting up DNSSEC with dnscrypt and dnsmask                                   |
+| [bootstrap.sh](https://github.com/soerenmartius/awesome-dotfiles/blob/master/bootstrap.sh)           | Install script. Copies all dotfiles to your $HOME directory                                      |
 
 ## Installation
 
@@ -123,7 +123,6 @@ willing to add more plugins for `oh-my-zsh` you do that using `zgen load`.
 
 You can overwrite settings for the used theme in `~/.themes`.
 
-
 ### Sensible macOS defaults
 
 When setting up a new Mac, you may want to set some sensible macOS defaults:
@@ -141,6 +140,18 @@ When setting up a new Mac, you may want to install some common [Homebrew](https:
 ```
 
 Some of the functionality of these dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones. A good example is Bash/Git completion: the dotfiles use a special version from Homebrew.
+
+### Install DNSSEC
+
+This reposiory comes with a handy [install script](https://github.com/soerenmartius/awesome-dotfiles/blob/master/install-dnssec.sh)
+that helps you setting up
+[DNSSEC](https://de.wikipedia.org/wiki/Domain_Name_System_Security_Extensions)
+with [dnscrypt](https://www.dnscrypt.org/) and
+[dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html).
+
+```bash
+source install-dnssec.sh
+```
 
 ## Feedback
 
