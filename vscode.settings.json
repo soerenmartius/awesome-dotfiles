@@ -3,7 +3,7 @@
 	"workbench.colorTheme": "Community Material Theme",
 	"editor.formatOnSave": true,
 	"files.autoSave": "onFocusChange",
-	"terminal.integrated.fontFamily": "Meslo LG L DZ for Powerline",
+	"terminal.integrated.fontFamily": "Hack Nerd Font",
 	"workbench.startupEditor": "none",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"git.autofetch": true,
@@ -49,11 +49,22 @@
 		"enabled": true,
 		"args": []
 	},
-	"editor.rulers": [120],
-	"editor.wordWrap": "wordWrapColumn",
-	"editor.wordWrapColumn": 120,
-	"vim.textwidth": 120,
 	"todo-tree.tree.showScanModeButton": false,
 	"go.useLanguageServer": true,
-	"markdown.extension.toc.levels": "2..6"
+	"markdown.extension.toc.levels": "2..6",
+	"markdown.extension.katex.macros": {},
+	"markdownlint.config": {
+		"MD041": false,
+		"MD033": false,
+		"MD034": false
+	},
+	"workbench.activityBar.visible": true,
+	"markdown.trace": "verbose",
+	"prettier.disableLanguages": ["markdown"],
+	"markdown.extension.toc.omittedFromToc": {},
+	"editor.wordWrap": "on",
+	"prettier.printWidth": 80,
+	"editor.wordWrapColumn": 120,
+	"editor.rulers": [80, 120],
+	"vim.textwidth": 80
 }
