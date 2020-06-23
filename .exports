@@ -1,10 +1,12 @@
 #!/usr/bin/env zsh
 
-# Make vim the default editor.
-export EDITOR='vim';
+# Make neovim the default editor.
+export EDITOR='vim'
+alias vim="nvim"
+alias vi="nvim"
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8';
+export PYTHONIOENCODING='UTF-8'
 
 # History
 export HISTFILE="$HOME/.zsh_history"
@@ -12,22 +14,22 @@ export HISTSIZE=32768
 export SAVEHIST=$HISTSIZE
 
 # Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth';
+export HISTCONTROL='ignoreboth'
 
 # Prefer US English and use UTF-8.
-export LANG='en_US.UTF-8';
-export LC_ALL='en_US.UTF-8';
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
 
 # Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
+export LESS_TERMCAP_md="${yellow}"
 
 # Allow less's default behavior to use termcap. This allows mouse scrolling.
 # Change to 'less -X' to capture output in terminal and disable mouse scrolling.
-export MANPAGER='less';
+export MANPAGER='less'
 
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
-export GPG_TTY=$(tty);
+export GPG_TTY=$(tty)
 
 # GoLang
 export GOPATH="$HOME/projects/golang" # you might want to consider to change this

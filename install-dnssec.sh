@@ -25,6 +25,9 @@ networksetup -setdnsservers Wi-Fi 127.0.0.1
 
 # You might want to consider to add your lan interfaces also otherwise queries
 # sent through these interfaces won't be resolved through dnscrypt-proxy
+#
+# For receiving a list of all hardware ports run `networksetup -listallhardwareport`
+#
 # networksetup -setdnsservers "USB 10/100/1000 LAN" 127.0.0.1
 
 # Validate that installation runs
