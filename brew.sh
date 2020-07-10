@@ -166,5 +166,8 @@ brew cask install aws-vault
 # Nerds-font
 brew cask install font-hack-nerd-font
 
+# MonitorControl https://github.com/MonitorControl/MonitorControl
+brew cask install monitorcontrol
+
 # Remove outdated versions from the cellar.
 brew cleanup
