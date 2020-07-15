@@ -153,7 +153,7 @@ brew install weaveworks/tap/footloose
 # Spectacle
 brew cask install spectacle
 
-# Install terraform & terraform tools
+# Install terraform & tflint
 brew install terragrunt
 brew install tflint
 
