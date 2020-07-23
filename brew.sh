@@ -154,6 +154,7 @@ brew install weaveworks/tap/footloose
 brew cask install spectacle
 
 # Install terraform & tflint
+brew install warrensbox/tap/tfswitch
 brew install terragrunt
 brew install tflint
 
