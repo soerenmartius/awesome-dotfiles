@@ -1,6 +1,4 @@
 #!/usr/bin/env zsh
-
-# fixing oh-my-zsh sudo issue https://github.com/robbyrussell/oh-my-zsh/issues/6835
 ZSH_DISABLE_COMPFIX=true
 
 # automatically run `zgen reset` if we modify our .zshrc
@@ -17,13 +15,7 @@ if ! zgen saved; then
 
   # oh my zsh plugins
   zgen oh-my-zsh plugins/osx
-  zgen oh-my-zsh plugins/urltools
-  zgen oh-my-zsh plugins/command-not-found
-  zgen oh-my-zsh plugins/docker
-  zgen oh-my-zsh plugins/golang
-  zgen oh-my-zsh plugins/terraform
   zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/command-not-found
 
   # plugins
@@ -35,9 +27,6 @@ if ! zgen saved; then
     zsh-users/history-substring-search
 EOPLUGINS
 
-  # theme
-  zgen load bhilburn/powerlevel9k powerlevel9k
-
   # generate the init script from plugins above
   zgen save
 fi
@@ -48,13 +37,18 @@ DISABLE_UPDATE_PROMPT=true
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{theme,path,exports,aliases,functions,extra}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+for file in ~/.{path,exports,aliases,functions,extra}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
 
 # get direnv working with zsh https://github.com/direnv/direnv/issues/64
 eval "$(direnv hook $SHELL)"
 
 # Source the asdf version manager asdf.sh dependency
-. $(brew --prefix asdf)/asdf.sh 
+. $(brew --prefix asdf)/asdf.sh
+
+# Use Starship Prompt
+# https://github.com/starship/starship'
+export STARSHIP_CONFIG=~/.starship.toml
+eval "$(starship init $SHELL)"

@@ -30,6 +30,9 @@ brew install gnu-sed
 brew install zsh
 brew install zsh-completions
 
+# Install Starship Prompt https://github.com/starship/starship
+brew install starship
+
 # Install Mac App Store command line interface
 brew install mas
 
