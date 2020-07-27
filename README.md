@@ -1,12 +1,12 @@
 # :hatching_chick: awesome dotfiles
 
-![Screenshot of my shell prompt](https://i.imgur.com/zy0bLDG.png)
+![Screenshot of my shell prompt](https://i.imgur.com/PeSa8rv.png)
 
 A port of [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles) to work with
 [zsh](https://www.zsh.org/).
 
 I use [iTerm](https://www.iterm2.com/), [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh),
-[Powerlevle9k](https://github.com/bhilburn/powerlevel9k) and [zgen](https://github.com/tarjoilija/zgen).
+[zgen](https://github.com/tarjoilija/zgen), and [Starship](https://github.com/starship/starship).
 
 ## What's included
 
@@ -24,7 +24,7 @@ I use [iTerm](https://www.iterm2.com/), [oh-my-zsh](https://github.com/robbyruss
 | [.inputrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.inputrc)                   | Readline configuration.                                                                          |
 | [.macos](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.macos)                       | MacOS configuration and useful settings.                                                         |
 | [.screenrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.screenrc)                 | Screen configuration.                                                                            |
-| [.theme](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.theme)                       | Settings for our oh-my-zsh theme.                                                                |
+| [.starship.toml](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.theme)               | Settings for Starship Prompt.                                                                    |
 | [.tmux.conf](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.tmux.conf)               | Tmux configuration.                                                                              |
 | [.vimrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.vimrc)                       | Vim editor configuration for inside the terminal.                                                |
 | [.wgetrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.wgetrc)                     | Wget configuration.                                                                              |
@@ -119,9 +119,10 @@ better to [fork this repository](https://github.com/soerenmartius/awesome-dotfil
 The configuration is located in `~/.zshr` and will automatically reload if you add changes to that file. If you are
 willing to add more plugins for `oh-my-zsh` you do that using `zgen load`.
 
-### Customize Powerline9k Theme
+### Customize Starship Prompt
 
-You can overwrite settings for the used theme in `~/.themes`.
+You can overwrite settings for the Starship Prompt in `~/.starship.toml`.
+For details please read the [documentation](https://starship.rs/config/).
 
 ### Sensible macOS defaults
 
