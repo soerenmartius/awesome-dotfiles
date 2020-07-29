@@ -10,7 +10,7 @@ I use [iTerm](https://www.iterm2.com/), [oh-my-zsh](https://github.com/robbyruss
 
 ## What's included
 
-| File                                                                                                 | Puporse                                                                                          |
+| File                                                                                                 | Purporse                                                                                         |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [.aliases](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.aliases)                   | A collection of useful aliases.                                                                  |
 | [.curlrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.curlrc)                     | Some basic settings for curl such like hiding curl as  an user agent.                            |
