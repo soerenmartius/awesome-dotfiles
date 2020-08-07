@@ -8,6 +8,7 @@ vsc="$(which code)"
 
 extensions=(
     aaron-bond.better-comments
+    bradlc.vscode-tailwindcss
     bungcip.better-toml
     christian-kohler.path-intellisense
     CoenraadS.bracket-pair-colorizer-2
@@ -23,19 +24,20 @@ extensions=(
     formulahendry.code-runner
     foxundermoon.shell-format
     GitHub.vscode-pull-request-github
-    golang.Go
+    golang.go
     Gruntfuggly.todo-tree
     hashicorp.terraform
     humao.rest-client
     kamikillerto.vscode-colorize
+    kretes.kretes
     letmaik.git-tree-compare
     mjmcloug.vscode-elixir
-    ms-azuretools.vscode-azureterraform
     ms-azuretools.vscode-docker
     ms-python.python
     ms-vscode.azure-account
     ms-vsliveshare.vsliveshare
     msjsdiag.debugger-for-chrome
+    octref.vetur
     oderwat.indent-rainbow
     PKief.material-icon-theme
     pranaygp.vscode-css-peek
