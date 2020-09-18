@@ -132,6 +132,7 @@ brew install helm                # helm kubernetes package manager
 brew install shellcheck          # shellcheck shell/bash linter
 brew install yamllint            # yamllint YAML linter
 brew install github/gh/gh        # github cli
+brew install nektos/tap/act      # test github actions locally
 
 brew cask install ngrok # ngrok secure introspectable tunnels to localhost
 
@@ -157,7 +158,6 @@ brew install weaveworks/tap/footloose
 brew cask install spectacle
 
 # Install terraform & tflint
-brew install warrensbox/tap/tfswitch
 brew install terragrunt
 brew install tflint
 
