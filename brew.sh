@@ -121,6 +121,7 @@ brew install python3
 brew install readline
 brew install rsync
 brew install telnet
+brew install netcat
 brew install tmate               # https://tmate.io/ Instant terminal sharing
 brew install semaphoreci/tap/sem # semaphore ci
 brew install websocat            # websocat
