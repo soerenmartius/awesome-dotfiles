@@ -111,9 +111,9 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 alias mergepdf='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=_merged.pdf'
 
 # Disable Spotlight
-alias spotoff="sudo mdutil -a -i off"
+alias spotoff="sudo mdutil / -i off"
 # Enable Spotlight
-alias spoton="sudo mdutil -a -i on"
+alias spoton="sudo mdutil / -i on"
 
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
 alias plistbuddy="/usr/libexec/PlistBuddy"
