@@ -42,9 +42,12 @@ brew install wget
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
+# The neovim brew package is outdated, so we install the latest master
+# Note: This can be broken and should be set to a stable version once the
+# brew package is updated
+brew install --HEAD neovim
+
 # Install more recent versions of some macOS tools.
-brew install vim
-brew install neovim
 brew install grep
 brew install openssh
 brew install screen
