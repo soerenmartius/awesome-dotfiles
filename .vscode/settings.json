@@ -1,17 +1,13 @@
 {
-	"window.zoomLevel": 0,
+	"window.zoomLevel": 4,
+	"workbench.editor.enablePreview": false,
 	"workbench.colorTheme": "Community Material Theme",
 	"editor.formatOnSave": true,
 	"files.autoSave": "onFocusChange",
-	"editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "eslint.validate": ["javascript"]
 	"terminal.integrated.fontFamily": "Hack Nerd Font",
 	"workbench.startupEditor": "none",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"git.autofetch": true,
-	"terraform.format": {},
 	"colorize.colorize_only_visible_beta": true,
 	"colorize.colorized_colors": ["BROWSERS_COLORS", "HEXA", "RGB", "HSL"],
 	"colorize.colorized_variables": ["SASS", "CSS", "LESS", "STYLUS"],
@@ -42,16 +38,9 @@
 	],
 	"bracket-pair-colorizer-2.excludedLanguages": [],
 	"files.insertFinalNewline": true,
-	"terraform.indexing": {
-		"enabled": false,
-		"liveIndexing": false,
-		"delay": 500,
-		"exclude": [".terraform/**/*", "**/.terraform/**/*"]
-	},
 	"terraform.languageServer": {
-		"installCommonProviders": true,
-		"enabled": true,
-		"args": []
+		"external": false,
+		"args": ["serve"]
 	},
 	"todo-tree.tree.showScanModeButton": false,
 	"go.useLanguageServer": true,
@@ -62,13 +51,31 @@
 		"MD033": false,
 		"MD034": false
 	},
+	"vim.vimrc.enable": true,
+	"vim.vimrc.path": "/Users/soerenmartius/.vimrc",
 	"workbench.activityBar.visible": true,
 	"markdown.trace": "verbose",
 	"prettier.disableLanguages": ["markdown"],
 	"markdown.extension.toc.omittedFromToc": {},
-	"editor.wordWrap": "on",
+	"editor.wordWrap": "bounded",
+	// WordWrap
 	"prettier.printWidth": 80,
+	"vim.textwidth": 80,
+	"editor.wrappingIndent": "same",
 	"editor.wordWrapColumn": 120,
 	"editor.rulers": [80, 120],
-	"vim.textwidth": 80
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"cSpell.diagnosticLevel": "Hint",
+	"workbench.editor.showTabs": true,
+	"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?=-=-",
+	"emmet.showAbbreviationSuggestions": true,
+	"emmet.showExpandedAbbreviation": "always",
+	"emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html"
+	},
+	"vetur.experimental.templateInterpolationService": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"liveServer.settings.donotShowInfoMsg": true,
 }

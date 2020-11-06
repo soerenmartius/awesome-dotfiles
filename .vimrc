@@ -1,3 +1,6 @@
+
+
+
 " Use the Solarized Dark theme
 set background=dark
 colorscheme solarized
@@ -89,6 +92,7 @@ syntax on
 set cursorline
 
 " Make tabs as wide as two spaces
+set expandtab
 set tabstop=2 softtabstop=2
 set shiftwidth=2
 

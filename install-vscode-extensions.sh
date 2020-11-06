@@ -2,7 +2,7 @@
 
 #########################################################
 # Execute Script
-# curl -s foofaa/install-vscode-extensions.sh | /bin/bash
+# curl -s https://raw.githubusercontent.com/soerenmartius/awesome-dotfiles/master/install-vscode-extensions.sh | /bin/bash
 #########################################################
 vsc="$(which code)"
 
@@ -34,6 +34,7 @@ extensions=(
     mjmcloug.vscode-elixir
     ms-azuretools.vscode-docker
     ms-python.python
+    ms-vscode-remote.remote-containers
     ms-vscode.azure-account
     ms-vsliveshare.vsliveshare
     msjsdiag.debugger-for-chrome
@@ -50,6 +51,7 @@ extensions=(
     shardulm94.trailing-spaces
     SimonSiefke.svg-preview
     streetsidesoftware.code-spell-checker
+    stylelint.vscode-stylelint
     VisualStudioExptTeam.vscodeintellicode
     vscodevim.vim
     wayou.vscode-todo-highlight
