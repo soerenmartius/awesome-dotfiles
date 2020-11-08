@@ -33,7 +33,7 @@
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
-	branches = branch -a
+  branches = branch --all
 	remotes = remote -v
 
 	# List aliases
@@ -86,6 +86,11 @@
 
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
+
+[branch]
+
+	# Show most recently changed branches first.
+	sort = -committerdate
 
 [core]
 
