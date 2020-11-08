@@ -183,6 +183,9 @@
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
+[init]
+	defaultBranch = main
+
 # URL shorthands
 
 [url "git@github.com:"]
