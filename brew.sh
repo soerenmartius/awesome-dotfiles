@@ -104,6 +104,7 @@ brew install watch
 brew install wrk
 brew install sslscan
 brew install tmux
+brew install tmuxinator
 brew install peco
 brew install gs
 
