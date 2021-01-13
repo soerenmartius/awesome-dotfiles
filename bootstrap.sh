@@ -17,18 +17,6 @@ else
 fi
 
 function doIt() {
-	mkdir -p "${HOME}/.config/nvim/plugin"
-	mkdir -p "${HOME}/.config/nvim/after/plugin"
-	mkdir -p "${HOME}/.config/nvim/lua"
-
-	# Install vim configs
-	for f in `find . | grep -E ".*\.vim$|.*\.lua$"`; do
-		rm -rf "${HOME}/.config/nvim/$f"
-
-		ln -s "${PWD}/$f" "${HOME}/.config/nvim/$f"
-	done
-
-
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".idea" \

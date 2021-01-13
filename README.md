@@ -20,13 +20,11 @@ I use [iTerm](https://www.iterm2.com/), [oh-my-zsh](https://github.com/robbyruss
 | [.functions](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.functions)               | Functions to be used by aliases.                                                                 |
 | [.gdbinit](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.dgbinit)                   | Settings for the DGB Debugger.                                                                   |
 | [.gitconfig](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.gitconfig)               | Git configuration settings.                                                                      |
-| [.gvimrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.gvimrc)                     | Settings for VIM GUI.                                                                            |
 | [.inputrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.inputrc)                   | Readline configuration.                                                                          |
 | [.macos](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.macos)                       | MacOS configuration and useful settings.                                                         |
 | [.screenrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.screenrc)                 | Screen configuration.                                                                            |
 | [.starship.toml](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.theme)               | Settings for Starship Prompt.                                                                    |
 | [.tmux.conf](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.tmux.conf)               | Tmux configuration.                                                                              |
-| [.vimrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.vimrc)                       | Vim editor configuration for inside the terminal.                                                |
 | [.wgetrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.wgetrc)                     | Wget configuration.                                                                              |
 | [.zshrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.zshrc)                       | ZSH configuration. This loads the zgen plugin manager and oh-my-zsh with it's plugins            |
 | [install-dnssec.sh](https://github.com/soerenmartius/awesome-dotfiles/blob/master/install-dnssec.sh) | Install script for setting up DNSSEC with dnscrypt and dnsmask                                   |

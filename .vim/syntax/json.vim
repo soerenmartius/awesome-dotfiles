@@ -1,1 +1,0 @@
-/Users/soerenmartius/projects/awesome-dotfiles/./.vim/syntax/json.vim
