@@ -178,5 +178,8 @@ brew cask install font-hack-nerd-font
 # MonitorControl https://github.com/MonitorControl/MonitorControl
 brew cask install monitorcontrol
 
+# Install VSCodium (VSCode without tracking)
+brew install --cask vscodium
+
 # Remove outdated versions from the cellar.
 brew cleanup
