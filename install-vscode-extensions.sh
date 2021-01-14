@@ -8,6 +8,7 @@ vsc="$(which code)"
 
 extensions=(
     aaron-bond.better-comments
+    asvetliakov.vscode-neovim
     bradlc.vscode-tailwindcss
     bungcip.better-toml
     christian-kohler.path-intellisense
@@ -20,7 +21,6 @@ extensions=(
     Equinusocio.vsc-material-theme
     equinusocio.vsc-material-theme-icons
     esbenp.prettier-vscode
-    formulahendry.auto-rename-tag
     formulahendry.code-runner
     foxundermoon.shell-format
     GitHub.vscode-pull-request-github
@@ -29,12 +29,9 @@ extensions=(
     hashicorp.terraform
     humao.rest-client
     kamikillerto.vscode-colorize
-    kretes.kretes
-    letmaik.git-tree-compare
-    mjmcloug.vscode-elixir
     ms-azuretools.vscode-docker
     ms-python.python
-    ms-vscode-remote.remote-containers
+    ms-toolsai.jupyter
     ms-vscode.azure-account
     ms-vsliveshare.vsliveshare
     msjsdiag.debugger-for-chrome
@@ -42,20 +39,16 @@ extensions=(
     oderwat.indent-rainbow
     PKief.material-icon-theme
     pranaygp.vscode-css-peek
-    quicktype.quicktype
     redhat.vscode-yaml
     ritwickdey.LiveServer
     rogalmic.bash-debug
     rust-lang.rust
     serayuzgur.crates
     shardulm94.trailing-spaces
-    SimonSiefke.svg-preview
     streetsidesoftware.code-spell-checker
     stylelint.vscode-stylelint
-    VisualStudioExptTeam.vscodeintellicode
-    vscodevim.vim
+    VSpaceCode.whichkey
     wayou.vscode-todo-highlight
-    wholroyd.HCL
     yzhang.markdown-all-in-one
 )
 
