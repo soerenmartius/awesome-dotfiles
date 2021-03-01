@@ -27,6 +27,7 @@ extensions=(
     golang.go
     Gruntfuggly.todo-tree
     hashicorp.terraform
+    heybourn.headwind
     humao.rest-client
     kamikillerto.vscode-colorize
     ms-azuretools.vscode-docker
@@ -49,7 +50,10 @@ extensions=(
     stylelint.vscode-stylelint
     VSpaceCode.whichkey
     wayou.vscode-todo-highlight
+    wix.vscode-import-cost
     yzhang.markdown-all-in-one
+    zhuangtongfa.material-theme
+    znck.grammarly
 )
 
 for i in ${extensions[@]}; do

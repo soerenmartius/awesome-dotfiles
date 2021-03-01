@@ -107,6 +107,7 @@ brew install tmux
 brew install tmuxinator
 brew install peco
 brew install gs
+brew install fzf
 
 # Development
 brew install ansible
@@ -162,7 +163,7 @@ brew install weaveworks/tap/footloose
 # Spectacle
 brew cask install spectacle
 
-# Install terraform & tflint
+# Install terraform tooling (terraform should be installed through asdf)
 brew install terragrunt
 brew install tflint
 
