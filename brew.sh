@@ -109,9 +109,12 @@ brew install peco
 brew install gs
 brew install fzf
 
+# Cloud Provider
+brew install --cask google-cloud-sdk
+brew install awscli
+
 # Development
 brew install ansible
-brew install awscli
 brew install asdf
 brew install protobuf
 brew install direnv # direnv for managing .envrc based environments
