@@ -9,9 +9,11 @@ vsc="$(which code)"
 extensions=(
     aaron-bond.better-comments
     asvetliakov.vscode-neovim
+    bierner.lit-html
     bradlc.vscode-tailwindcss
     bungcip.better-toml
     christian-kohler.path-intellisense
+    CodeStream.codestream
     CoenraadS.bracket-pair-colorizer-2
     DavidAnson.vscode-markdownlint
     dbaeumer.vscode-eslint
@@ -27,6 +29,7 @@ extensions=(
     golang.go
     Gruntfuggly.todo-tree
     hashicorp.terraform
+    henriiik.vscode-sort
     heybourn.headwind
     humao.rest-client
     kamikillerto.vscode-colorize
@@ -38,6 +41,7 @@ extensions=(
     msjsdiag.debugger-for-chrome
     octref.vetur
     oderwat.indent-rainbow
+    pascalsenn.keyboard-quickfix
     PKief.material-icon-theme
     pranaygp.vscode-css-peek
     redhat.vscode-yaml
