@@ -137,6 +137,7 @@ brew install ripgrep             # ripgrep recursively searches directories for 
 brew install libpq               # install postgres tools without installing full postgres
 brew install elixir              # elixir programming language
 brew install kubectl             # kubernetes cli
+brew install kubectx             # Faster way to switch between clusters and namespaces
 brew install helm                # helm kubernetes package manager
 brew install shellcheck          # shellcheck shell/bash linter
 brew install yamllint            # yamllint YAML linter
