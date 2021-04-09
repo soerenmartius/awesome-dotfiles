@@ -138,6 +138,7 @@ brew install libpq               # install postgres tools without installing ful
 brew install elixir              # elixir programming language
 brew install kubectl             # kubernetes cli
 brew install kubectx             # Faster way to switch between clusters and namespaces
+brew install --cask lens         # Lens GUI for kubernetes
 brew install helm                # helm kubernetes package manager
 brew install shellcheck          # shellcheck shell/bash linter
 brew install yamllint            # yamllint YAML linter
