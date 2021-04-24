@@ -176,4 +176,4 @@ alias dnscrypt-test="sudo lsof -i :5355 && sudo lsof -i :53 && dig TXT debug.dns
 alias n="/usr/local/bin/nvim"
 
 # NVim config directory
-alias vc="cd $HOME/.config/nvim"
+alias ncfg="cd $HOME/.config/nvim"

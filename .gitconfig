@@ -33,7 +33,7 @@
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
-  branches = branch --all
+    branches = branch --all
 	remotes = remote -v
 
 	# List aliases
@@ -115,6 +115,11 @@
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
 	untrackedCache = true
 
+    # Ignore fileMod changes such as chmod 
+	fileMode = false
+
+    # Use NVim as the default editor
+    editor = /usr/local/bin/nvim -u ~/.config/nvim/init.lua
 [color]
 
 	# Use colors in Git commands that are capable of colored output when
@@ -199,3 +204,9 @@
 # Always use ssh
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[user]
+	name = Soren Martius
+	email = soeren.martius@gmail.com
+	signingkey = 4CCF69E8
+[pull]
+	rebase = true
