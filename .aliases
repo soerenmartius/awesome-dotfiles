@@ -1,4 +1,4 @@
-j!/usr/bin/env zsh
+#!/usr/bin/env zsh
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -176,4 +176,4 @@ alias dnscrypt-test="sudo lsof -i :5355 && sudo lsof -i :53 && dig TXT debug.dns
 alias n="/usr/local/bin/nvim"
 
 # NVim config directory
-alias ncfg="cd $HOME/.config/nvim"
+alias vc="cd $HOME/.config/nvim"
