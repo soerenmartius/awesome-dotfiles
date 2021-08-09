@@ -60,6 +60,7 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups-2017.
+brew install wireshark
 brew install aircrack-ng
 brew install bfg
 brew install binutils
@@ -88,6 +89,7 @@ brew install xz
 # Install other useful binaries.
 brew install ack
 brew install git
+brew install git-xargs
 brew install git-lfs
 brew install imagemagick
 brew install lynx
@@ -103,8 +105,6 @@ brew install zopfli
 brew install watch
 brew install wrk
 brew install sslscan
-brew install tmux
-brew install tmuxinator
 brew install peco
 brew install gs
 brew install fzf
@@ -114,6 +114,13 @@ brew install --cask google-cloud-sdk
 brew install awscli
 
 # Development
+brew install tmux
+brew install tmuxinator
+brew install alacritty
+
+brew install lua
+brew install k6
+brew install wasmer
 brew install ansible
 brew install asdf
 brew install protobuf
@@ -136,14 +143,18 @@ brew install websocat            # websocat
 brew install ripgrep             # ripgrep recursively searches directories for a regex pattern
 brew install libpq               # install postgres tools without installing full postgres
 brew install elixir              # elixir programming language
-brew install kubectl             # kubernetes cli
-brew install kubectx             # Faster way to switch between clusters and namespaces
 brew install --cask lens         # Lens GUI for kubernetes
 brew install helm                # helm kubernetes package manager
 brew install shellcheck          # shellcheck shell/bash linter
 brew install yamllint            # yamllint YAML linter
 brew install github/gh/gh        # github cli
 brew install nektos/tap/act      # test github actions locally
+
+# Kubernetes
+brew install kubectl             # kubernetes cli
+brew install kubectx             # Faster way to switch between clusters and namespaces
+brew install --cask lens
+
 
 brew cask install ngrok # ngrok secure introspectable tunnels to localhost
 
