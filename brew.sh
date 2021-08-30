@@ -182,6 +182,7 @@ brew cask install spectacle
 # Install terraform tooling (terraform should be installed through asdf)
 brew install terragrunt
 brew install tflint
+brew install hashicorp/tap/terraform-ls
 
 # Packetsender
 brew cask install packetsender
