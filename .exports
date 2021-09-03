@@ -38,3 +38,6 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # Postgres Tools
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+# GNU
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"

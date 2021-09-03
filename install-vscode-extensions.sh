@@ -4,7 +4,7 @@
 # Execute Script
 # curl -s https://raw.githubusercontent.com/soerenmartius/awesome-dotfiles/master/install-vscode-extensions.sh | /bin/bash
 #########################################################
-vsc="$(which code)"
+vsc="$(which code || which codium)"
 
 extensions=(
     aaron-bond.better-comments
@@ -32,14 +32,15 @@ extensions=(
     henriiik.vscode-sort
     heybourn.headwind
     humao.rest-client
+    johnsoncodehk.volar
     kamikillerto.vscode-colorize
     ms-azuretools.vscode-docker
     ms-python.python
+    ms-python.vscode-pylance
     ms-toolsai.jupyter
     ms-vscode.azure-account
     ms-vsliveshare.vsliveshare
     msjsdiag.debugger-for-chrome
-    octref.vetur
     oderwat.indent-rainbow
     pascalsenn.keyboard-quickfix
     PKief.material-icon-theme
@@ -47,7 +48,7 @@ extensions=(
     redhat.vscode-yaml
     ritwickdey.LiveServer
     rogalmic.bash-debug
-    rust-lang.rust
+    rustlang.rust
     serayuzgur.crates
     shardulm94.trailing-spaces
     streetsidesoftware.code-spell-checker

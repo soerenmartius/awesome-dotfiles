@@ -15,7 +15,7 @@
 	# Pull in remote changes for the current repository and all its submodules
 	p = pull --recurse-submodules
 
-	# Pull current branch updates from remove
+	# Pull current branch updates from remote
 	pb = !"git pull origin $(git rev-parse --abbrev-ref HEAD)"
 
 	# Clone a repository including all submodules
@@ -30,6 +30,15 @@
 
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout \"$1\" 2> /dev/null || git checkout -b \"$1\"; }; f"
+
+  # Switch to main branch and pull updates
+  gmp = "!f() { git checkout main && git pull origin main; }; f"
+
+  # Switch to master branch and pull updates
+  gmap = "!f() { git checkout master && git pull origin master; }; f"
+
+	# Switch to an aliased branch, creating it if necessary
+	sgo = "!f() { git checkout soerenmartius/\"$1\" 2> /dev/null || git checkout -b soerenmartius/\"$1\"; }; f"
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
