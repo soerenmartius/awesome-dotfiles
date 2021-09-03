@@ -119,6 +119,7 @@ brew install tmuxinator
 brew install alacritty
 
 brew install lua
+brew install ninja # Ninja for Lua
 brew install k6
 brew install wasmer
 brew install ansible
