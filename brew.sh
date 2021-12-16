@@ -152,8 +152,9 @@ brew install github/gh/gh        # github cli
 brew install nektos/tap/act      # test github actions locally
 
 # Kubernetes
-brew install kubectl             # kubernetes cli
-brew install kubectx             # Faster way to switch between clusters and namespaces
+brew install kubectl                        # kubernetes cli
+brew install c-bata/kube-prompt/kube-prompt # kubectl prompt
+brew install kubectx                        # faster way to switch between clusters and namespaces
 brew install --cask lens
 
 
