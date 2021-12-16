@@ -39,5 +39,10 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 # Postgres Tools
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
-# GNU
+# GNU grep
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+# GNU xargs
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+
+# ASDF
+export ASDF_DIR='/usr/local/opt/asdf/libexec'
