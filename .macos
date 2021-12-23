@@ -1,11 +1,6 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # ~/.macos
-
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
-
 # Ask for the administrator password upfront
 sudo -v
 
@@ -140,8 +135,18 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
+# Enable AptX and AAC codecs
+defaults write bluetoothaudiod "Enable AptX codec" -bool true
+defaults write bluetoothaudiod "Enable AAC codec" -bool true
+
 # Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" -int 80
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 80
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" -int 80
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" -int 80
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" -int 80
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" -int 80
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" -int 80
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
