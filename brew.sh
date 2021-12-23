@@ -157,18 +157,17 @@ brew install c-bata/kube-prompt/kube-prompt # kubectl prompt
 brew install kubectx                        # faster way to switch between clusters and namespaces
 brew install --cask lens
 
-
-brew cask install ngrok # ngrok secure introspectable tunnels to localhost
+brew install --cask ngrok # ngrok secure introspectable tunnels to localhost
 
 # Golangci-lint
 brew install golangci/tap/golangci-lint
 
 # Miniconda python environment manager
-brew cask install miniconda
+brew install --cask miniconda
 
 # Java 11
 brew tap homebrew/cask-versions
-brew cask install java
+brew install --cask java
 
 # Displayplacer https://github.com/jakehilborn/displayplacer
 brew tap jakehilborn/jakehilborn
@@ -179,7 +178,10 @@ brew tap weaveworks/tap
 brew install weaveworks/tap/footloose
 
 # Spectacle
-brew cask install spectacle
+brew install --cask spectacle
+
+# Automatically lock headphone balance
+brew install --cask balance-lock
 
 # Install terraform tooling (terraform should be installed through asdf)
 brew install --ignore-dependencies terragrunt
@@ -187,16 +189,16 @@ brew install tflint
 brew install hashicorp/tap/terraform-ls
 
 # Packetsender
-brew cask install packetsender
+brew install --cask packetsender
 
 # Aws-vault
-brew cask install aws-vault
+brew install --cask aws-vault
 
 # Nerds-font
-brew cask install font-hack-nerd-font
+brew install --cask font-hack-nerd-font
 
 # MonitorControl https://github.com/MonitorControl/MonitorControl
-brew cask install monitorcontrol
+brew install --cask monitorcontrol
 
 # Install VSCodium (VSCode without tracking)
 brew install --cask vscodium
