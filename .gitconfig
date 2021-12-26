@@ -31,18 +31,18 @@
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout \"$1\" 2> /dev/null || git checkout -b \"$1\"; }; f"
 
-  # Switch to main branch and pull updates
-  gmp = "!f() { git checkout main && git pull origin main; }; f"
+	# Switch to main branch and pull updates
+	gmp = "!f() { git checkout main && git pull origin main; }; f"
 
-  # Switch to master branch and pull updates
-  gmap = "!f() { git checkout master && git pull origin master; }; f"
+	# Switch to master branch and pull updates
+	gmap = "!f() { git checkout master && git pull origin master; }; f"
 
 	# Switch to an aliased branch, creating it if necessary
 	sgo = "!f() { git checkout soerenmartius/\"$1\" 2> /dev/null || git checkout -b soerenmartius/\"$1\"; }; f"
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
-    branches = branch --all
+	branches = branch --all
 	remotes = remote -v
 
 	# List aliases
