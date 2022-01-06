@@ -213,9 +213,11 @@
 # Always use ssh
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
-[user]
-	name = Soren Martius
-	email = soeren.martius@gmail.com
-	signingkey = 4CCF69E8
+
+; [user]
+; 	name = Soren Martius
+; 	email = soeren.martius@gmail.com
+; 	signingkey = 4CCF69E8
+
 [pull]
 	rebase = true
