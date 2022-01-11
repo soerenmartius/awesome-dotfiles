@@ -198,6 +198,8 @@ brew install --cask aws-vault
 
 # Nerds-font
 brew install --cask font-hack-nerd-font
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
 
 # MonitorControl https://github.com/MonitorControl/MonitorControl
 brew install --cask monitorcontrol

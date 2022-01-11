@@ -105,28 +105,53 @@ import:
 
 # Font configuration
 font:
-  # Normal (roman) font face
   normal:
-    family: Hack Nerd Font Mono
-    style: Regular
-
-  # Bold font face
+    family: "FiraCode Nerd Font"
+    style: Retina
   bold:
-    family: Hack Nerd Font Mono
+    family: "FiraCode Nerd Font"
     style: Bold
-
-  # Italic font face
   italic:
-    family: Hack Nerd Font Mono
+    family: "Hack Nerd Font"
     style: Italic
-
-  # Bold italic font face
   bold_italic:
-    family: Hack Nerd Font Mono
+    family: "Hack Nerd Font"
     style: Bold Italic
+  size: 13
+  offset:
+    x: 0
+    y: 8
 
-  # Point size
-  size: 14.0
+  ligatures: true
+  glyph_offset:
+    x: 0
+    y: 0
+
+  use_thin_strokes: true
+
+# font:
+#   # Normal (roman) font face
+#   normal:
+#     family: Hack Nerd Font Mono
+#     style: Regular
+
+#   # Bold font face
+#   bold:
+#     family: Hack Nerd Font Mono
+#     style: Bold
+
+#   # Italic font face
+#   italic:
+#     family: Hack Nerd Font Mono
+#     style: Italic
+
+#   # Bold italic font face
+#   bold_italic:
+#     family: Hack Nerd Font Mono
+#     style: Bold Italic
+
+#   # Point size
+#   size: 14.0
 
 #font:
 # Normal (roman) font face
