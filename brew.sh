@@ -207,5 +207,8 @@ brew install --cask monitorcontrol
 # Install VSCodium (VSCode without tracking)
 brew install --cask vscodium
 
+# Install responsively https://responsively.app/
+brew install --cask responsively
+
 # Remove outdated versions from the cellar.
 brew cleanup
