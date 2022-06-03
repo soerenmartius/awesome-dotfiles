@@ -172,8 +172,5 @@ alias datgf="find . -name .terragrunt-cache | xargs rm -rfv"
 # Test dnscrypt
 alias dnscrypt-test="sudo lsof -i :5355 && sudo lsof -i :53 && dig TXT debug.dnscrypt.info"
 
-# NVim
-alias n="/usr/local/bin/lvim"
-
-# NVim config directory
-alias ncfg="cd $HOME/.local/share/lunarvim/lvim"
+# Lunarvim config directory
+alias lvcfg="cd $HOME/.config/lvim"
