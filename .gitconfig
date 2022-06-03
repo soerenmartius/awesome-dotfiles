@@ -77,16 +77,16 @@
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-	# Remove branches that have already been merged with master
+	# Remove branches that have already been merged with master|main
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 	# Remove stale branches that are gone on remote
 	dg = "!git branch -vv | grep ': gone]'|  grep -v '\\*' | awk '{ print $1; }' | xargs -I F git branch -D \"F\""
 
-	# Remove all local branches except master
+	# Remove all local branches except master and main
 	# a.k.a. 'delete merged'
-	da = "!git branch | grep -v "master" | xargs git branch -D"
+	da = "!git branch | grep -Eiv "(master|main)" | xargs git branch -D"
 
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
