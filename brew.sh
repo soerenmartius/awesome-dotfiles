@@ -157,7 +157,8 @@ brew install nektos/tap/act      # test github actions locally
 brew install kubectl                        # kubernetes cli
 brew install c-bata/kube-prompt/kube-prompt # kubectl prompt
 brew install kubectx                        # faster way to switch between clusters and namespaces
-brew install --cask lens
+brew install --cask lens                    # A Kubernetes IDE
+brew install k9s                            # Kubernetes CLI To Manage Your Clusters In Style!
 
 brew install --cask ngrok # ngrok secure introspectable tunnels to localhost
 
