@@ -34,8 +34,8 @@
 	# Switch to main branch and pull updates
 	gmp = "!f() { git checkout main && git pull origin main; }; f"
 
-	# Switch to master branch and pull updates
-	gmap = "!f() { git checkout master && git pull origin master; }; f"
+	# Switch to main branch and pull updates
+	gmap = "!f() { git checkout main && git pull origin main; }; f"
 
 	# Switch to an aliased branch, creating it if necessary
 	sgo = "!f() { git checkout soerenmartius/\"$1\" 2> /dev/null || git checkout -b soerenmartius/\"$1\"; }; f"
@@ -66,7 +66,7 @@
 	# Fixup commits produce commits that fix a specific commit in history by appending a commit with message fixup!
 	# An interactive rebase with --autosquash option will then merge the original commit and the fixup into a
 	# new commit and rebase the subsequent commits.
-	fix = "!f() { !git commit -a --fixup $1 && git rebase --autosquash --interactive master }"
+	fix = "!f() { !git commit -a --fixup $1 && git rebase --autosquash --interactive main }"
 
 	# Find tags containing commit
 	ft = "!f() { git describe --always --contains $1; }; f"
@@ -77,16 +77,15 @@
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-	# Remove branches that have already been merged with master|main
+	# Remove branches that have already been merged with main
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 	# Remove stale branches that are gone on remote
 	dg = "!git branch -vv | grep ': gone]'|  grep -v '\\*' | awk '{ print $1; }' | xargs -I F git branch -D \"F\""
 
-	# Remove all local branches except master and main
-	# a.k.a. 'delete merged'
-	da = "!git branch | grep -Eiv "(master|main)" | xargs git branch -D"
+	# Remove all local branches except the current one
+	da = "!git branch | grep -v '^*' | xargs git branch -d"
 
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
@@ -124,7 +123,7 @@
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
 	untrackedCache = true
 
-    # Ignore fileMod changes such as chmod 
+    # Ignore fileMod changes such as chmod
 	fileMode = false
 
     # Use NVim as the default editor
@@ -193,7 +192,7 @@
 
 [url "git@github.com:"]
 
-	insteadOf = "gh:"
+	insteadOf = https://github.com/
 	pushInsteadOf = "github:"
 	pushInsteadOf = "git://github.com/"
 
@@ -221,3 +220,8 @@
 
 [pull]
 	rebase = true
+
+[user]
+	name = Soren Martius
+	email = soeren.martius@gmail.com
+	signingkey = 4CCF69E8
