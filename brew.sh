@@ -141,7 +141,6 @@ brew install rsync
 brew install telnet
 brew install netcat
 brew install tmate               # https://tmate.io/ Instant terminal sharing
-brew install semaphoreci/tap/sem # semaphore ci
 brew install websocat            # websocat
 brew install ripgrep             # ripgrep recursively searches directories for a regex pattern
 brew install libpq               # install postgres tools without installing full postgres
@@ -192,8 +191,9 @@ brew install --cask font-fira-code
 # MonitorControl https://github.com/MonitorControl/MonitorControl
 brew install --cask monitorcontrol
 
-# Install VSCodium (VSCode without tracking)
-brew install --cask vscodium
+# Communication
+brew install --cask slack
+brew install --cask discord
 
 # Remove outdated versions from the cellar.
 brew cleanup
