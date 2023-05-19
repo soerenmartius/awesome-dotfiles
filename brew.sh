@@ -172,24 +172,11 @@ brew install --cask miniconda
 brew tap homebrew/cask-versions
 brew install --cask java
 
-# Displayplacer https://github.com/jakehilborn/displayplacer
-brew tap jakehilborn/jakehilborn
-brew install displayplacer
-
-# Footloose https://github.com/weaveworks/footloose
-brew tap weaveworks/tap
-brew install weaveworks/tap/footloose
-
 # Spectacle
 brew install --cask spectacle
 
 # Automatically lock headphone balance
 brew install --cask balance-lock
-
-# Install terraform tooling (terraform should be installed through asdf)
-brew install --ignore-dependencies terragrunt
-brew install tflint
-brew install hashicorp/tap/terraform-ls
 
 # Packetsender
 brew install --cask packetsender

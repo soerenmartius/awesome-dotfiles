@@ -45,9 +45,6 @@ unset file
 # get direnv working with zsh https://github.com/direnv/direnv/issues/64
 eval "$(direnv hook $SHELL)"
 
-# Source the asdf version manager asdf.sh dependency
-. $(brew --prefix asdf)/asdf.sh
-
 # Use Starship Prompt
 # https://github.com/starship/starship'
 export STARSHIP_CONFIG=~/.starship.toml

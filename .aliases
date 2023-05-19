@@ -15,7 +15,7 @@ alias p="cd ~/projects"
 alias g="hub"
 
 # Verbose output for rm, cp and mv
-alias rm="rm -v"
+alias rmv="rm -v"
 alias cp="cp -v"
 alias mv="mv -v"
 
@@ -131,9 +131,6 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "${method}"="lwp-request -m '${method}'"
 done
 
-# Make Grunt print stack traces by default
-command -v grunt >/dev/null && alias grunt="grunt --stack"
-
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume output volume 100'"
@@ -173,4 +170,6 @@ alias datgf="find . -name .terragrunt-cache | xargs rm -rfv"
 alias dnscrypt-test="sudo lsof -i :5355 && sudo lsof -i :53 && dig TXT debug.dnscrypt.info"
 
 # Lunarvim config directory
-alias lvcfg="cd $HOME/.config/lvim"
+alias vimcfg="cd $HOME/.config/lvim"
+
+#alias heic=for i in *.HEIC; do magick convert  '$i' '${i%.*}.jpg"; done
