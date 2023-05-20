@@ -38,8 +38,7 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 # Postgres Tools
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
-# GNU grep
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-
-# GNU xargs
-export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+# GNU tools
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"

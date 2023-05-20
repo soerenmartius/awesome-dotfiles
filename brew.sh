@@ -194,16 +194,24 @@ brew install rbenv
 # Communication
 brew install --cask slack
 brew install --cask discord
+brew install --cask zoom
 
 # Productivity
 brew install --cask todoist
 brew install --cask rectangle
+brew install --cask grammarly
+brew install --cask nordvpn
+brew install lazygit
 
 # Rust
 brew install rust
 
 # Alfred
 brew install --cask alfred
+
+# This allows users to make use of the pam_tid module (Touch ID) from within tmux.
+# Means we can now use fingerprint for sudo in tmux
+brew install pam-reattach
 
 # Remove outdated versions from the cellar.
 brew cleanup
