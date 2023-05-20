@@ -14,7 +14,6 @@ if ! zgen saved; then
   zgen oh-my-zsh
 
   # oh my zsh plugins
-  zgen oh-my-zsh plugins/osx
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/command-not-found
 

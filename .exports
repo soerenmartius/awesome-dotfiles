@@ -2,8 +2,7 @@
 
 # Make neovim the default editor.
 export EDITOR='vim'
-alias vim="nvim"
-alias vi="nvim"
+alias vim="$HOME/.local/bin/lvim"
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8'
@@ -41,8 +40,6 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # GNU grep
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+
 # GNU xargs
 export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
-
-# ASDF
-export ASDF_DIR='/usr/local/opt/asdf/libexec'

@@ -11,7 +11,8 @@ alias -- -="cd -"
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias p="cd ~/dev"
+alias d="cd ~/dev"
 alias g="hub"
 
 # Verbose output for rm, cp and mv
@@ -169,7 +170,9 @@ alias datgf="find . -name .terragrunt-cache | xargs rm -rfv"
 # Test dnscrypt
 alias dnscrypt-test="sudo lsof -i :5355 && sudo lsof -i :53 && dig TXT debug.dnscrypt.info"
 
-# Lunarvim config directory
-alias vimcfg="cd $HOME/.config/lvim"
+# Neovim Stuff
+alias vc="cd $HOME/.config/lvim"
+alias v="$HOME/.local/bin/lvim"
+alias vup="$HOME/.local/bin/lvim +LvimUpdate +LvimCacheReset +q"
 
 #alias heic=for i in *.HEIC; do magick convert  '$i' '${i%.*}.jpg"; done

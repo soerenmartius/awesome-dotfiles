@@ -171,8 +171,6 @@ brew install --cask miniconda
 brew tap homebrew/cask-versions
 brew install --cask java
 
-# Spectacle
-brew install --cask spectacle
 
 # Automatically lock headphone balance
 brew install --cask balance-lock
@@ -184,16 +182,28 @@ brew install --cask packetsender
 brew install --cask aws-vault
 
 # Nerds-font
-brew install --cask font-hack-nerd-font
 brew tap homebrew/cask-fonts
+brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs -I{} brew install --cask {} || true
 brew install --cask font-fira-code
 
 # MonitorControl https://github.com/MonitorControl/MonitorControl
 brew install --cask monitorcontrol
 
+brew install rbenv
+
 # Communication
 brew install --cask slack
 brew install --cask discord
+
+# Productivity
+brew install --cask todoist
+brew install --cask rectangle
+
+# Rust
+brew install rust
+
+# Alfred
+brew install --cask alfred
 
 # Remove outdated versions from the cellar.
 brew cleanup
