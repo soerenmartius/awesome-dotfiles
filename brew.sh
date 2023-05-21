@@ -209,6 +209,12 @@ brew install rust
 # Alfred
 brew install --cask alfred
 
+# The most important command ever
+brew install cmatrix
+
+# Awesome stats in top menu bar
+brew install stats
+
 # This allows users to make use of the pam_tid module (Touch ID) from within tmux.
 # Means we can now use fingerprint for sudo in tmux
 brew install pam-reattach
