@@ -58,7 +58,7 @@ alias sudo='sudo '
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; mas upgrade; brew cleanup; gem update --user-install --system -n /usr/local/bin; gem update --user-install -n /usr/local/bin; gem cleanup'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; mas upgrade; brew cleanup; sudo gem update --user-install --system -n /usr/local/bin; sudo gem update --user-install -n /usr/local/bin; gem cleanup'
 
 # Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
@@ -174,5 +174,8 @@ alias dnscrypt-test="sudo lsof -i :5355 && sudo lsof -i :53 && dig TXT debug.dns
 alias vc="cd $HOME/.config/lvim"
 alias v="$HOME/.local/bin/lvim"
 alias vup="$HOME/.local/bin/lvim +LvimUpdate +LvimCacheReset +q"
+
+# Podman
+alias docker="podman"
 
 #alias heic=for i in *.HEIC; do magick convert  '$i' '${i%.*}.jpg"; done

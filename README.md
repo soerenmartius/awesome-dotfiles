@@ -164,3 +164,9 @@ Suggestions/improvements are
 ## Thanks to…
 
 * [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
+
+```
+# sudo: auth account password session
+auth       optional       /opt/homebrew/lib/pam/pam_reattach.so
+auth       sufficient     pam_tid.so
+```
