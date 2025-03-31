@@ -171,9 +171,10 @@ alias datgf="find . -name .terragrunt-cache | xargs rm -rfv"
 alias dnscrypt-test="sudo lsof -i :5355 && sudo lsof -i :53 && dig TXT debug.dnscrypt.info"
 
 # Neovim Stuff
-alias vc="cd $HOME/.config/lvim"
-alias v="$HOME/.local/bin/lvim"
-alias vup="$HOME/.local/bin/lvim +LvimUpdate +LvimCacheReset +q"
+alias vc="cd $HOME/.config/nvim"
+alias v="/opt/homebrew/bin/nvim"
+alias vi="/opt/homebrew/bin/nvim"
+alias vim="/opt/homebrew/bin/nvim"
 
 # Podman
 alias docker="podman"

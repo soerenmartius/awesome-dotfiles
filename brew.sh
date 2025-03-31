@@ -228,3 +228,12 @@ brew install --cask elgato-control-center
 
 # Remove outdated versions from the cellar.
 brew cleanup
+brew install --cask notion
+
+brew install ollama
+brew install libpq
+brew install --cask chatgpt
+brew install withgraphite/tap/graphite
+brew install --cask flameshot
+brew install deno
+brew install --cask mongodb-compass
