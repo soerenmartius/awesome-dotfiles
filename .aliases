@@ -177,6 +177,8 @@ alias vi="/opt/homebrew/bin/nvim"
 alias vim="/opt/homebrew/bin/nvim"
 
 # Podman
-alias docker="podman"
+# alias docker="podman"
 
 #alias heic=for i in *.HEIC; do magick convert  '$i' '${i%.*}.jpg"; done
+# Claude without asking for permissions
+alias cc="claude --dangerously-skip-permissions"
