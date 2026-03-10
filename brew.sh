@@ -219,10 +219,8 @@ brew install stats
 # Means we can now use fingerprint for sudo in tmux
 brew install pam-reattach
 
-pinentry-mac
-brew install --cask 1password/tap/1password-cli
-# brew install --cask vscodium
-brew install --cask visual-studio-code
+brew install pinentry-mac
+
 
 brew install --cask elgato-control-center
 
@@ -237,3 +235,8 @@ brew install withgraphite/tap/graphite
 brew install --cask flameshot
 brew install deno
 brew install --cask mongodb-compass
+brew install --cask iina
+brew install ghostty
+brew install --cask 1password-cli
+brew install --cask cmux
+

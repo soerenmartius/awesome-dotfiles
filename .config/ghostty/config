@@ -1,0 +1,2 @@
+# command = direct:/Users/soerenmartius/.local/bin/tmux-auto-session
+command = shell:/bin/zsh -l -c 'exec tmux new-session -A -s main'
