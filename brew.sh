@@ -116,7 +116,6 @@ brew install awscli
 # Development
 brew install tmux
 brew install tmuxinator
-brew install alacritty
 
 brew install lua
 brew install luajit
@@ -200,7 +199,6 @@ brew install --cask zoom
 brew install --cask todoist
 brew install --cask rectangle
 brew install --cask grammarly
-brew install --cask nordvpn
 brew install lazygit
 
 # Rust
