@@ -1,4 +1,3 @@
-import = ["/Users/soerenmartius/.config/alacritty/dracula.toml"]
 
 [font]
 size = 13
@@ -227,9 +226,14 @@ chars = "\u001B9"
 key = "Key9"
 mods = "Alt"
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "tmux attach -t default || tmux new -s default"]
 program = "/bin/zsh"
 
 [window]
 opacity = 1.0
+
+[general]
+import = ["/Users/soerenmartius/.config/alacritty/dracula.toml"]
+
+[terminal]

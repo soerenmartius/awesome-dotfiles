@@ -14,6 +14,7 @@ local plugins = {
   "nvim-treesitter-textobjects",
   "nvim-ts-context-commentstring",
   "hop.nvim",
+  "kylechui/nvim-surround",
 }
 
 local Config = require "lazy.core.config"

@@ -1,2 +1,5 @@
-# command = direct:/Users/soerenmartius/.local/bin/tmux-auto-session
-command = shell:/bin/zsh -l -c 'exec tmux new-session -A -s main'
+# Every window goes through ~/.local/bin/tmux-work: it joins the shared `work`
+# tmux server or, for the first window after a boot, starts it, restores the
+# last tmux-resurrect snapshot and arms autosave before attaching. The launcher
+# also cd's to ~ first (a deleted cwd inherited by the server breaks new panes).
+command = shell:/bin/zsh -l -c 'exec ~/.local/bin/tmux-work'

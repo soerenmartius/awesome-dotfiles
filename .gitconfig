@@ -127,7 +127,7 @@
 	fileMode = false
 
     # Use NVim as the default editor
-    editor = /usr/local/bin/nvim -u ~/.config/nvim/init.lua
+    editor = nvim
 [color]
 
 	# Use colors in Git commands that are capable of colored output when
@@ -192,7 +192,6 @@
 
 [url "git@github.com:"]
 
-	insteadOf = https://github.com/
 	pushInsteadOf = "github:"
 	pushInsteadOf = "git://github.com/"
 
@@ -209,9 +208,14 @@
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
 
-# Always use ssh
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
-
 [pull]
 	rebase = true
+
+# HTTPS remotes authenticate through the GitHub CLI (`gh auth login`), so no
+# tokens live in this file and no https->ssh rewriting is needed anymore.
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential

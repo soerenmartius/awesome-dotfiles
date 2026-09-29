@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+# tmux-work: Ghostty's entry point into the shared `work` tmux server.
+#
+# If the server is already running, this just joins the `main` session.
+# If not, this is the first terminal after a boot: it starts the server,
+# restores the last tmux-resurrect snapshot, arms tmux-continuum's autosave and
+# only then attaches. Other Ghostty windows launched at the same moment wait
+# for that restore instead of racing it, so it does not matter how many windows
+# macOS reopens at login.
+#
+# Restore and autosave are driven from here on purpose: tmux-continuum skips
+# both whenever it sees more than one tmux client during the server's first
+# second, which is exactly what happens when Ghostty reopens several windows.
+
+socket="${TMUX_WORK_SOCKET:-work}"
+session="${TMUX_WORK_SESSION:-main}"
+# Extra tmux flags; tests use this to point at a scratch config ("-f /path").
+extra_args="${TMUX_WORK_TMUX_ARGS:-}"
+
+plugins="$HOME/.tmux/plugins"
+restore_script="$plugins/tmux-resurrect/scripts/restore.sh"
+save_hook="#($plugins/tmux-continuum/scripts/continuum_save.sh)"
+lock="${TMPDIR:-/tmp}/tmux-work-$socket.lock"
+
+# shellcheck disable=SC2086  # word splitting of extra_args is intended
+tm() { tmux -L "$socket" $extra_args "$@"; }
+
+# Whichever window starts the tmux *server* donates its cwd to that server for
+# its whole lifetime; a deleted cwd (removed git worktree) would then break
+# every new pane with "getcwd: cannot access parent directories". Start at ~.
+cd "$HOME" || exit 1
+
+# Drop a lock left behind by a crashed startup (older than 2 minutes).
+if [ -d "$lock" ] && [ -n "$(find "$lock" -maxdepth 0 -mmin +2 2>/dev/null)" ]; then
+  rmdir "$lock" 2>/dev/null
+fi
+
+if ! tm has-session 2>/dev/null && mkdir "$lock" 2>/dev/null; then
+  trap 'rmdir "$lock" 2>/dev/null' EXIT
+  echo "Starting tmux server '$socket' and restoring the last saved session..."
+  # Stamp continuum's autosave clock in the same command that creates the
+  # session, so the first autosave lands 15 minutes from now and can never
+  # overwrite the snapshot with a half-restored state.
+  tm new-session -d -s "$session" \; set -g @continuum-save-last-timestamp "$(date +%s)"
+  # Wait for TPM to finish loading plugins (resurrect registers its path).
+  for _ in $(seq 1 50); do
+    [ -n "$(tm show -gqv @resurrect-restore-script-path 2>/dev/null)" ] && break
+    sleep 0.1
+  done
+  if [ -x "$restore_script" ]; then
+    tm run-shell "$restore_script"
+  else
+    echo "tmux-resurrect is not installed; skipping restore." >&2
+  fi
+  # Arm continuum's autosave no matter how many clients it saw at startup.
+  current="$(tm show -gqv status-right)"
+  case "$current" in
+    *"$save_hook"*) ;;
+    *) tm set -g status-right "${save_hook}${current}" ;;
+  esac
+  rmdir "$lock" 2>/dev/null
+  trap - EXIT
+else
+  # Another window is starting the server; wait for its restore (max 60 s).
+  for _ in $(seq 1 300); do
+    [ -d "$lock" ] || break
+    sleep 0.2
+  done
+fi
+
+# shellcheck disable=SC2086
+exec tmux -L "$socket" $extra_args new-session -A -s "$session"
