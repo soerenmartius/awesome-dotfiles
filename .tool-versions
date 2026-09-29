@@ -1,0 +1,7 @@
+terraform 1.6.6
+terramate 0.16.0
+nodejs 25.8.2
+pnpm 9.15.9
+opentofu 1.6.0
+golangci-lint 2.5.0
+terramate-catalyst 0.15.2-beta11

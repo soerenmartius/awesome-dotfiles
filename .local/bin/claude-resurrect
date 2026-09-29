@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Launched by tmux-resurrect in place of a saved `claude ...` command.
+# Rewrites the saved arguments so the *existing* conversation is resumed:
+#   --session-id X  -> --resume X      (exact session)
+#   -w/--worktree   -> dropped         (the pane's cwd already is the worktree)
+#   no resume flag  -> adds --continue (latest conversation in this directory)
+args=()
+resume=0
+while (($#)); do
+  case "$1" in
+    --session-id)      args+=(--resume "$2"); resume=1; shift 2 ;;
+    --session-id=*)    args+=(--resume "${1#*=}"); resume=1; shift ;;
+    -r|--resume|-c|--continue) resume=1; args+=("$1"); shift ;;
+    -w|--worktree)     shift; [[ $# -gt 0 && $1 != -* ]] && shift ;;
+    -w=*|--worktree=*) shift ;;
+    *)                 args+=("$1"); shift ;;
+  esac
+done
+((resume)) || args+=(--continue)
+exec claude "${args[@]}"

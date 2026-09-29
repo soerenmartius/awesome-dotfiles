@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""tmux-resurrect post-save-layout hook: stamp saved Claude Code panes with their session ID.
+
+tmux-resurrect saves each pane's command line as `ps` shows it. A Claude Code pane
+started as `claude --dangerously-skip-permissions ...` carries no session ID, so a
+restore could only guess the conversation with `--continue`. Claude Code publishes
+every live process in ~/.claude/sessions/<pid>.json (pid + sessionId), so this hook
+appends `--session-id <id>` to such saved commands. On restore,
+~/.local/bin/claude-resurrect turns that into `claude --resume <id>`, and every pane
+gets exactly its own conversation back.
+
+Wired up in ~/.tmux.conf:
+  set -g @resurrect-hook-post-save-layout '~/.local/bin/tmux-resurrect-claude-ids'
+tmux-resurrect calls it with the path of the snapshot it just wrote.
+"""
+import json
+import os
+import shlex
+import subprocess
+import sys
+
+SESSIONS_DIR = os.path.expanduser("~/.claude/sessions")
+RESUME_FLAGS = {"--resume", "-r", "--continue", "-c", "--session-id"}
+
+
+def run(cmd):
+    return subprocess.run(cmd, capture_output=True, text=True, check=False).stdout
+
+
+def pane_pids():
+    """(session, window_index, pane_index) -> pane pid, from the live server."""
+    out = run(["tmux", "list-panes", "-a", "-F",
+               "#{session_name}\t#{window_index}\t#{pane_index}\t#{pane_pid}"])
+    pids = {}
+    for line in out.splitlines():
+        parts = line.split("\t")
+        if len(parts) == 4:
+            pids[tuple(parts[:3])] = parts[3]
+    return pids
+
+
+def children():
+    """ppid -> [pid] for every process."""
+    tree = {}
+    for line in run(["ps", "-axo", "pid=,ppid="]).splitlines():
+        parts = line.split()
+        if len(parts) == 2:
+            tree.setdefault(parts[1], []).append(parts[0])
+    return tree
+
+
+def session_id_for(pane_pid, tree):
+    """The Claude session running in this pane, if any.
+
+    Claude is normally the pane shell's direct child; a pane spawned with a
+    command instead of a shell is the Claude process itself.
+    """
+    for pid in [pane_pid] + tree.get(pane_pid, []):
+        path = os.path.join(SESSIONS_DIR, f"{pid}.json")
+        if os.path.isfile(path):
+            try:
+                with open(path) as fh:
+                    return json.load(fh).get("sessionId")
+            except (OSError, ValueError):
+                return None
+    return None
+
+
+def main():
+    if len(sys.argv) < 2 or not os.path.isfile(sys.argv[1]):
+        return
+    path = sys.argv[1]
+    with open(path) as fh:
+        lines = fh.read().split("\n")
+
+    pids = pane_pids()
+    tree = children()
+    changed = 0
+    for i, line in enumerate(lines):
+        fields = line.split("\t")
+        # pane <session> <win idx> <win active> :<flags> <pane idx> <title> :<path> <active> <cmd> :<full cmd>
+        if len(fields) < 11 or fields[0] != "pane":
+            continue
+        cmd = fields[10]
+        if not cmd.startswith(":"):
+            continue
+        try:
+            argv = shlex.split(cmd[1:])
+        except ValueError:
+            continue
+        if not argv or os.path.basename(argv[0]) != "claude":
+            continue
+        if RESUME_FLAGS.intersection(argv[1:]):
+            continue
+        pane_pid = pids.get((fields[1], fields[2], fields[5]))
+        if not pane_pid:
+            continue
+        sid = session_id_for(pane_pid, tree)
+        if not sid:
+            continue
+        fields[10] = f"{cmd} --session-id {sid}"
+        lines[i] = "\t".join(fields)
+        changed += 1
+
+    if changed:
+        tmp = f"{path}.tmp"
+        with open(tmp, "w") as fh:
+            fh.write("\n".join(lines))
+        os.replace(tmp, path)
+
+
+if __name__ == "__main__":
+    main()

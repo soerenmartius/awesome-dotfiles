@@ -1,8 +1,7 @@
 #!/usr/bin/env zsh
 
 # Make neovim the default editor.
-export EDITOR='vim'
-alias vim="$HOME/.local/bin/lvim"
+export EDITOR='nvim'
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8'
@@ -32,11 +31,10 @@ export GPG_TTY=$(tty)
 
 # GoLang
 export GOPATH="$HOME/projects/golang" # you might want to consider to change this
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export PATH="$PATH:${GOPATH}/bin"
 
 # Postgres Tools
-export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # GNU tools
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -45,3 +43,6 @@ export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 
 # 1Password SSH Agent
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
+# User-local binaries (uv, pipx, the tmux/Claude helpers from this repo)
+export PATH="$HOME/.local/bin:$PATH"
