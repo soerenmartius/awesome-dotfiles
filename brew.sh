@@ -16,6 +16,16 @@ brew upgrade
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
 
+# Homebrew 7 ignores third-party taps until they are trusted. Trust exactly the
+# formulae and casks this script installs from them (older brews lack the command).
+brew trust --formula \
+	bramstein/webfonttools/sfnt2woff bramstein/webfonttools/sfnt2woff-zopfli \
+	c-bata/kube-prompt/kube-prompt ekristen/tap/aws-nuke golangci/tap/golangci-lint \
+	hashicorp/tap/packer hashicorp/tap/terraform-ls openresty/brew/openresty \
+	sergiobenitez/osxct/x86_64-unknown-linux-gnu supabase/tap/supabase \
+	withgraphite/tap/graphite to11ai/tap/to11 2>/dev/null || true
+brew trust --cask entireio/tap/entire ramonvermeulen/whosthere/whosthere 2>/dev/null || true
+
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -244,14 +254,12 @@ brew install --cask font-fira-code
 brew install --cask visual-studio-code
 brew install --cask warp
 brew install --cask wave
-brew tap manaflow-ai/cmux
 brew install --cask cmux
 
 # Dev GUIs
 brew install --cask postman
 brew install --cask mongodb-compass
 brew install --cask medis
-brew install --cask redis-pro
 brew install --cask gpg-suite
 brew tap entireio/tap
 brew install --cask entire
@@ -268,11 +276,9 @@ brew install --cask whosthere
 brew install --cask rectangle
 brew install --cask spectacle
 brew install --cask alfred
-brew install --cask flameshot
 brew install --cask iina
 brew install --cask elgato-control-center
-brew install --cask gstreamer-runtime
-brew install --cask wine-stable
+# flameshot, gstreamer-runtime, redis-pro and wine-stable are disabled upstream and no longer installable
 
 # Communication
 brew install --cask slack
