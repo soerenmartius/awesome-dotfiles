@@ -6,6 +6,7 @@ ZGEN_RESET_ON_CHANGE=("${HOME}/.zshrc")
 
 # Extra completion functions have to be on fpath before oh-my-zsh runs compinit.
 [ -d "${HOME}/.docker/completions" ] && fpath=("${HOME}/.docker/completions" $fpath)
+[ -d "${HOME}/.zfunc" ] && fpath+=("${HOME}/.zfunc")
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -91,6 +92,17 @@ fi
 
 # Windsurf
 [ -d "$HOME/.codeium/windsurf/bin" ] && export PATH="$HOME/.codeium/windsurf/bin:$PATH"
+
+# Ruby (brew install rbenv)
+command -v rbenv >/dev/null && eval "$(rbenv init - zsh)"
+
+# Shell productivity
+# fzf: Ctrl-T picks files, Alt-C jumps to a directory (Ctrl-R is taken over by atuin below)
+command -v fzf >/dev/null && source <(fzf --zsh)
+# zoxide: `z <part of a path>` jumps to the directory you use most
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
+# atuin: Ctrl-R becomes a searchable, cross-machine shell history (`atuin register` / `atuin login` to sync)
+command -v atuin >/dev/null && eval "$(atuin init zsh --disable-up-arrow)"
 
 # Bash-style completion for tools that only ship a `complete -C` handler
 autoload -U +X bashcompinit && bashcompinit

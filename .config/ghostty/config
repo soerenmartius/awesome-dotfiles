@@ -3,3 +3,29 @@
 # last tmux-resurrect snapshot and arms autosave before attaching. The launcher
 # also cd's to ~ first (a deleted cwd inherited by the server breaks new panes).
 command = shell:/bin/zsh -l -c 'exec ~/.local/bin/tmux-work'
+
+# Alt/Meta works in zsh and tmux (Alt-b/Alt-f word jumps, Alt-C for fzf)
+macos-option-as-alt = true
+# Selecting text copies it, iTerm style
+copy-on-select = clipboard
+# tmux holds all state, so closing a Ghostty window is never destructive
+confirm-close-surface = false
+# Restore comes from tmux, not from Ghostty reopening windows
+window-save-state = never
+
+# Drive tmux (prefix Ctrl-a = \x01) with macOS-style keys
+keybind = cmd+t=text:\x01c
+keybind = cmd+d=text:\x01|
+keybind = cmd+shift+d=text:\x01-
+keybind = cmd+shift+left_bracket=text:\x01p
+keybind = cmd+shift+right_bracket=text:\x01n
+keybind = cmd+zero=text:\x010
+keybind = cmd+one=text:\x011
+keybind = cmd+two=text:\x012
+keybind = cmd+three=text:\x013
+keybind = cmd+four=text:\x014
+keybind = cmd+five=text:\x015
+keybind = cmd+six=text:\x016
+keybind = cmd+seven=text:\x017
+keybind = cmd+eight=text:\x018
+keybind = cmd+nine=text:\x019

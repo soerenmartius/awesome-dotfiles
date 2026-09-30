@@ -4,3 +4,15 @@ command_timeout = 1000
 
 [aws]
 disabled = true
+
+[gcloud]
+disabled = true
+
+[kubernetes]
+disabled = false
+detect_files = ["Chart.yaml", "kustomization.yaml", "skaffold.yaml"]
+detect_folders = ["k8s", "helm", "charts", "manifests"]
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
