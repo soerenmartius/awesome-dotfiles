@@ -189,7 +189,8 @@ brew install --cask aws-vault-binary
 brew install azure-cli
 brew install cloudflared
 brew install ansible
-brew install packer
+brew install hashicorp/tap/packer
+brew install hashicorp/tap/terraform-ls
 brew install opentofu
 brew install terragrunt
 brew install infracost
@@ -198,12 +199,19 @@ brew install pulumi
 brew install neonctl
 brew install nixpacks
 brew install solana
+brew install supabase/tap/supabase
+brew install ekristen/tap/aws-nuke
+brew install withgraphite/tap/graphite
+brew install golangci/tap/golangci-lint
+brew install openresty/brew/openresty
+brew install sergiobenitez/osxct/x86_64-unknown-linux-gnu   # Linux cross toolchain
 
 # Kubernetes
 brew install kubernetes-cli                 # kubectl
 brew install kubectx                        # faster way to switch between clusters and namespaces
 brew install helm                           # helm kubernetes package manager
 brew install k9s                            # Kubernetes CLI To Manage Your Clusters In Style!
+brew install c-bata/kube-prompt/kube-prompt # kubectl prompt
 brew install --cask lens                    # A Kubernetes IDE
 
 # Containers
