@@ -215,7 +215,10 @@ brew install supabase/tap/supabase
 brew install ekristen/tap/aws-nuke
 brew install withgraphite/tap/graphite
 brew install golangci/tap/golangci-lint
-brew install openresty/brew/openresty
+# openresty builds from source and currently fails on Apple Silicon (its GeoIP module
+# needs a library Homebrew no longer ships, openresty/homebrew-brew#53). Installed
+# machines keep the working 1.29 via `brew pin openresty`.
+brew install openresty/brew/openresty || true
 brew install sergiobenitez/osxct/x86_64-unknown-linux-gnu   # Linux cross toolchain
 
 # Kubernetes
