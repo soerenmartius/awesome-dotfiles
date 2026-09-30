@@ -162,6 +162,7 @@
 
 	# Detect copies as well as renames
 	renames = copies
+	algorithm = histogram
 
 [diff "bin"]
 
@@ -177,6 +178,7 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	conflictstyle = zdiff3
 
 [push]
 
@@ -184,6 +186,7 @@
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+	autoSetupRemote = true
 
 [init]
 	defaultBranch = main
@@ -219,3 +222,10 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[rebase]
+	autoStash = true
+	autoSquash = true
+[rerere]
+	enabled = true
+[fetch]
+	prune = true

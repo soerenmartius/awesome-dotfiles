@@ -133,6 +133,8 @@ brew install pam-reattach        # Touch ID for sudo inside tmux, see README
 brew install asciinema
 brew install agg                 # asciinema gif generator
 brew install direnv              # direnv for managing .envrc based environments
+brew install zoxide              # smarter cd
+brew install atuin               # searchable, syncable shell history
 
 # Languages, runtimes & build tools
 # asdf is not installed via Homebrew but cloned into ~/.asdf by bootstrap.sh

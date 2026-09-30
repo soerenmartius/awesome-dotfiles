@@ -17,6 +17,7 @@ for all SSH keys. tmux windows and running [Claude Code](https://claude.com/clau
 | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | [.aliases](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.aliases)                                         | A collection of useful aliases.                                                                    |
 | [.asdfrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.asdfrc)                                           | asdf settings (reads `.nvmrc`, `.terraform-version` and friends as legacy version files).          |
+| [.condarc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.condarc)                                         | conda: no auto-activated base environment, TLS verification on.                                    |
 | [.curlrc](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.curlrc)                                           | Some basic settings for curl such like hiding curl as an user agent.                               |
 | [.editorconfig](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.editorconfig)                               | Consistent coding styles between different editors and IDEs.                                       |
 | [.exports](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.exports)                                         | Environment variables: editor, history, locale, `$PATH`, Go, GNU tools, the 1Password SSH socket.  |
@@ -133,8 +134,13 @@ better to [fork this repository](https://github.com/soerenmartius/awesome-dotfil
 [zgen](https://github.com/tarjoilija/zgen). The configuration is located in `~/.zshrc` and will automatically reload
 if you add changes to that file. If you want to add more plugins for `oh-my-zsh` you do that using `zgen load`.
 
-Toolchains (asdf, rustup, uv, bun, Java, gcloud, miniconda, Windsurf) are wired up further down in `~/.zshrc`, each
-guarded by an existence check, so the same file works on a machine that only has some of them installed.
+Toolchains (asdf, rustup, uv, bun, Java, gcloud, miniconda, Windsurf, rbenv) are wired up further down in `~/.zshrc`,
+each guarded by an existence check, so the same file works on a machine that only has some of them installed.
+
+Shell navigation: [fzf](https://github.com/junegunn/fzf) gives `Ctrl-T` (files) and `Alt-C` (directories),
+[zoxide](https://github.com/ajeetdsouza/zoxide) gives `z <part of a path>`, and
+[atuin](https://github.com/atuinsh/atuin) replaces `Ctrl-R` with a searchable history that can sync between machines
+after `atuin register` or `atuin login`.
 
 ### Customize Starship Prompt
 
@@ -165,7 +171,13 @@ Running [Claude Code](https://claude.com/claude-code) sessions come back too:
 * The `claude` function in `.zshrc` gives new interactive sessions an explicit `--session-id` up front.
 
 Useful keys: the prefix is `Ctrl-a`; `prefix + Ctrl-s` saves a snapshot, `prefix + Ctrl-r` restores one,
-`prefix + r` reloads the config. Snapshots live in `~/.local/share/tmux/resurrect`.
+`prefix + r` reloads the config, `prefix + |` and `prefix + -` split in the current directory, `prefix + g` opens
+lazygit in a popup, `prefix + t` a scratch shell. Snapshots live in `~/.local/share/tmux/resurrect`.
+
+Ghostty forwards macOS-style keys to tmux: `Cmd+1` to `Cmd+9` and `Cmd+0` switch windows, `Cmd+T` opens a window,
+`Cmd+D` / `Cmd+Shift+D` split, `Cmd+Shift+[` / `]` move between windows. Every pane shows its title above it, which
+for Claude Code is the current conversation summary, and a bell from any window (Claude finishing or waiting for
+input) highlights that window and bounces the dock icon.
 
 ### SSH keys in 1Password
 
