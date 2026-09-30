@@ -85,7 +85,6 @@ brew install dex2jar
 brew install dns2tcp
 brew install fcrackzip
 brew install foremost
-brew install hashpump
 brew install hydra
 brew install john
 brew install knock
@@ -96,10 +95,10 @@ brew install socat
 brew install sqlmap
 brew install tcpflow
 brew install tcpreplay
-brew install tcptrace
 brew install ucspi-tcp # `tcpserver` etc.
 brew install xpdf
 brew install xz
+# hashpump and tcptrace were removed from Homebrew
 
 # Install other useful binaries.
 brew install ack
@@ -120,7 +119,6 @@ brew install rlwrap
 brew install ssh-copy-id
 brew install tree
 brew install vbindiff
-brew install zopfli
 brew install watch
 brew install wrk
 brew install sslscan
@@ -138,8 +136,8 @@ brew install cmatrix             # The most important command ever
 brew install --cask ghostty
 brew install tmux
 brew install tmuxinator
-brew install tmate               # https://tmate.io/ Instant terminal sharing
 brew install pam-reattach        # Touch ID for sudo inside tmux, see README
+# tmate and zopfli are deprecated upstream; still installed on my machines but not worth a fresh install
 brew install asciinema
 brew install agg                 # asciinema gif generator
 brew install direnv              # direnv for managing .envrc based environments
