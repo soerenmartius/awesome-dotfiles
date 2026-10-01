@@ -36,10 +36,10 @@ export PATH="$PATH:${GOPATH}/bin"
 # Postgres Tools
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
-# GNU tools
+# GNU tools (findutils stays g-prefixed: gfind, gxargs. Un-prefixed GNU find on PATH
+# breaks Python builds from source, which brew doctor flags.)
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
-export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 
 # 1Password SSH Agent
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock

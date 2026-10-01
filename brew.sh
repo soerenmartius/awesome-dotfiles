@@ -21,7 +21,7 @@ BREW_PREFIX=$(brew --prefix)
 brew trust --formula \
 	bramstein/webfonttools/sfnt2woff \
 	c-bata/kube-prompt/kube-prompt ekristen/tap/aws-nuke golangci/tap/golangci-lint \
-	hashicorp/tap/packer hashicorp/tap/terraform-ls openresty/brew/openresty \
+	hashicorp/tap/packer hashicorp/tap/terraform-ls \
 	sergiobenitez/osxct/x86_64-unknown-linux-gnu supabase/tap/supabase \
 	withgraphite/tap/graphite to11ai/tap/to11 2>/dev/null || true
 brew trust --cask entireio/tap/entire ramonvermeulen/whosthere/whosthere 2>/dev/null || true
@@ -213,10 +213,6 @@ brew install supabase/tap/supabase
 brew install ekristen/tap/aws-nuke
 brew install withgraphite/tap/graphite
 brew install golangci/tap/golangci-lint
-# openresty builds from source and currently fails on Apple Silicon (its GeoIP module
-# needs a library Homebrew no longer ships, openresty/homebrew-brew#53). Installed
-# machines keep the working 1.29 via `brew pin openresty`.
-brew install openresty/brew/openresty || true
 brew install sergiobenitez/osxct/x86_64-unknown-linux-gnu   # Linux cross toolchain
 
 # Kubernetes
