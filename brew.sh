@@ -19,7 +19,7 @@ BREW_PREFIX=$(brew --prefix)
 # Homebrew 7 ignores third-party taps until they are trusted. Trust exactly the
 # formulae and casks this script installs from them (older brews lack the command).
 brew trust --formula \
-	bramstein/webfonttools/sfnt2woff bramstein/webfonttools/sfnt2woff-zopfli \
+	bramstein/webfonttools/sfnt2woff \
 	c-bata/kube-prompt/kube-prompt ekristen/tap/aws-nuke golangci/tap/golangci-lint \
 	hashicorp/tap/packer hashicorp/tap/terraform-ls openresty/brew/openresty \
 	sergiobenitez/osxct/x86_64-unknown-linux-gnu supabase/tap/supabase \
@@ -71,7 +71,7 @@ brew install netcat
 # Install font tools.
 brew tap bramstein/webfonttools
 brew install sfnt2woff
-brew install sfnt2woff-zopfli
+# sfnt2woff-zopfli no longer loads under Homebrew 7 (its tap formula needs Ruby's removed base64 gem)
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups-2017.
