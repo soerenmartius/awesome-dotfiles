@@ -19,9 +19,9 @@ BREW_PREFIX=$(brew --prefix)
 # Homebrew 7 ignores third-party taps until they are trusted. Trust exactly the
 # formulae and casks this script installs from them (older brews lack the command).
 brew trust --formula \
-	bramstein/webfonttools/sfnt2woff bramstein/webfonttools/sfnt2woff-zopfli \
+	bramstein/webfonttools/sfnt2woff \
 	c-bata/kube-prompt/kube-prompt ekristen/tap/aws-nuke golangci/tap/golangci-lint \
-	hashicorp/tap/packer hashicorp/tap/terraform-ls openresty/brew/openresty \
+	hashicorp/tap/packer hashicorp/tap/terraform-ls \
 	sergiobenitez/osxct/x86_64-unknown-linux-gnu supabase/tap/supabase \
 	withgraphite/tap/graphite to11ai/tap/to11 2>/dev/null || true
 brew trust --cask entireio/tap/entire ramonvermeulen/whosthere/whosthere 2>/dev/null || true
@@ -71,7 +71,7 @@ brew install netcat
 # Install font tools.
 brew tap bramstein/webfonttools
 brew install sfnt2woff
-brew install sfnt2woff-zopfli
+# sfnt2woff-zopfli no longer loads under Homebrew 7 (its tap formula needs Ruby's removed base64 gem)
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups-2017.
@@ -85,7 +85,6 @@ brew install dex2jar
 brew install dns2tcp
 brew install fcrackzip
 brew install foremost
-brew install hashpump
 brew install hydra
 brew install john
 brew install knock
@@ -96,10 +95,10 @@ brew install socat
 brew install sqlmap
 brew install tcpflow
 brew install tcpreplay
-brew install tcptrace
 brew install ucspi-tcp # `tcpserver` etc.
 brew install xpdf
 brew install xz
+# hashpump and tcptrace were removed from Homebrew
 
 # Install other useful binaries.
 brew install ack
@@ -120,7 +119,6 @@ brew install rlwrap
 brew install ssh-copy-id
 brew install tree
 brew install vbindiff
-brew install zopfli
 brew install watch
 brew install wrk
 brew install sslscan
@@ -138,8 +136,8 @@ brew install cmatrix             # The most important command ever
 brew install --cask ghostty
 brew install tmux
 brew install tmuxinator
-brew install tmate               # https://tmate.io/ Instant terminal sharing
 brew install pam-reattach        # Touch ID for sudo inside tmux, see README
+# tmate and zopfli are deprecated upstream; still installed on my machines but not worth a fresh install
 brew install asciinema
 brew install agg                 # asciinema gif generator
 brew install direnv              # direnv for managing .envrc based environments
@@ -215,10 +213,6 @@ brew install supabase/tap/supabase
 brew install ekristen/tap/aws-nuke
 brew install withgraphite/tap/graphite
 brew install golangci/tap/golangci-lint
-# openresty builds from source and currently fails on Apple Silicon (its GeoIP module
-# needs a library Homebrew no longer ships, openresty/homebrew-brew#53). Installed
-# machines keep the working 1.29 via `brew pin openresty`.
-brew install openresty/brew/openresty || true
 brew install sergiobenitez/osxct/x86_64-unknown-linux-gnu   # Linux cross toolchain
 
 # Kubernetes

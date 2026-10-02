@@ -4,6 +4,13 @@ ZSH_DISABLE_COMPFIX=true
 # automatically run `zgen reset` if we modify our .zshrc
 ZGEN_RESET_ON_CHANGE=("${HOME}/.zshrc")
 
+# Keep completion caches in ~/.cache/zsh instead of littering ~ with one
+# .zcompdump-<host>-<version> per hostname change (oh-my-zsh and zgen honour these).
+_zsh_cache="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"; mkdir -p "$_zsh_cache"
+export ZSH_COMPDUMP="$_zsh_cache/zcompdump-${ZSH_VERSION}"
+export ZGEN_CUSTOM_COMPDUMP="$ZSH_COMPDUMP"
+unset _zsh_cache
+
 # Extra completion functions have to be on fpath before oh-my-zsh runs compinit.
 [ -d "${HOME}/.docker/completions" ] && fpath=("${HOME}/.docker/completions" $fpath)
 [ -d "${HOME}/.zfunc" ] && fpath+=("${HOME}/.zfunc")
