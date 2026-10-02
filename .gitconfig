@@ -155,8 +155,20 @@
 
 [commit]
 
-	# https://help.github.com/articles/signing-commits-using-gpg/
+	# Sign every commit. The key itself is set per machine in ~/.extra.
 	gpgsign = true
+
+[gpg]
+
+	# Sign with an SSH key held in 1Password instead of GPG
+	# https://developer.1password.com/docs/ssh/git-commit-signing/
+	format = ssh
+
+[gpg "ssh"]
+
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	# Lets `git log --show-signature` verify signatures locally
+	allowedSignersFile = ~/.config/git/allowed_signers
 
 [diff]
 
