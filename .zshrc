@@ -53,6 +53,9 @@ if [ -f "$HOME/.asdf/asdf.sh" ]; then
   . "$HOME/.asdf/asdf.sh"
 elif [ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]; then
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
+elif command -v asdf >/dev/null; then
+  # asdf >= 0.16 is a single binary; it only needs its shims on PATH
+  export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 fi
 # let asdf-golang pick the Go version from go.mod
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
