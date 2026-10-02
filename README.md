@@ -130,10 +130,6 @@ mkdir -p ~/.config/git
 echo "$GIT_AUTHOR_EMAIL $GIT_SIGNING_KEY" > ~/.config/git/allowed_signers
 ```
 
-Commits are signed with an SSH key stored in 1Password. On a new machine, turn on the SSH agent in
-1Password (Settings → Developer → Use the SSH agent), put the key's public half into `~/.extra` as above,
-and add it on GitHub as a **Signing Key** (`gh ssh-key add key.pub --type signing`) so commits show as Verified.
-
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably
 better to [fork this repository](https://github.com/soerenmartius/awesome-dotfiles/fork) instead, though.
 
@@ -194,6 +190,38 @@ SSH keys are stored in 1Password and served by its [SSH agent](https://developer
 `.ssh/config` sets `IdentityAgent` to the agent socket and `.exports` sets `SSH_AUTH_SOCK` to the same path, so both
 `ssh` and tools that talk to the agent directly (git, `ssh-add -l`) find the keys. Enable the agent under
 *1Password → Settings → Developer* on a new machine. Nothing else needs to be copied.
+
+### Commit signing with 1Password
+
+`.gitconfig` signs every commit with an SSH key stored in 1Password. This is my setup; if you don't use
+1Password, see [Without 1Password](#without-1password) below, otherwise every commit fails.
+
+On a new machine:
+
+1. Turn on the 1Password SSH agent (see above).
+2. Copy the key's public half (open the key in 1Password, or run `ssh-add -L` to list the agent's keys) into
+   `~/.extra` as `GIT_SIGNING_KEY`, as in the [`~/.extra` example](#add-custom-commands-without-creating-a-new-fork).
+3. Add it on GitHub as a **Signing Key** so commits show as Verified. That is a separate entry from the
+   authentication key, even for the same key: save the public key to a file and run
+   `gh ssh-key add key.pub --type signing --title "1Password signing"`.
+
+Migrating from GPG: replace the old `git config --global user.signingkey <GPG key id>` line in `~/.extra`.
+Otherwise Git tries to load the GPG key id as an SSH key and fails with `Couldn't load public key`.
+
+#### Without 1Password
+
+Override the signing settings from `~/.extra`. Either turn signing off:
+
+```bash
+git config --global commit.gpgsign false
+```
+
+or sign with a plain key file instead of 1Password:
+
+```bash
+git config --global gpg.ssh.program ssh-keygen
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
+```
 
 ### Touch ID for sudo
 
