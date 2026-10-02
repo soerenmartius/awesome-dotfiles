@@ -208,6 +208,21 @@ On a new machine:
 Migrating from GPG: replace the old `git config --global user.signingkey <GPG key id>` line in `~/.extra`.
 Otherwise Git tries to load the GPG key id as an SSH key and fails with `Couldn't load public key`.
 
+#### A different email per folder
+
+One key signs commits for any email. To commit as a work address in some repos, add an `includeIf` per folder
+in `~/.extra` (it has to live there because `bootstrap.sh` overwrites `~/.gitconfig`):
+
+```bash
+printf '[user]\n\temail = me@work.example\n' > ~/.config/git/work
+git config --global includeIf."gitdir:$HOME/dev/work/".path ~/.config/git/work
+echo "me@work.example $GIT_SIGNING_KEY" >> ~/.config/git/allowed_signers
+```
+
+Every repo under `~/dev/work` then commits as `me@work.example`. GitHub only shows a signed commit as Verified
+when its email is a verified email on the account that holds the signing key, so add each address under
+GitHub → Settings → Emails.
+
 #### Without 1Password
 
 Override the signing settings from `~/.extra`. Either turn signing off:
