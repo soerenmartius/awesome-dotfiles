@@ -122,8 +122,17 @@ git config --global user.name "$GIT_AUTHOR_NAME"
 GIT_AUTHOR_EMAIL="soeren.martius@gmail.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
-git config --global user.signingkey YOURGPGKEYID
+
+# Commit signing: public half of the 1Password SSH key (see .gitconfig)
+GIT_SIGNING_KEY="ssh-ed25519 AAAA..."
+git config --global user.signingkey "$GIT_SIGNING_KEY"
+mkdir -p ~/.config/git
+echo "$GIT_AUTHOR_EMAIL $GIT_SIGNING_KEY" > ~/.config/git/allowed_signers
 ```
+
+Commits are signed with an SSH key stored in 1Password. On a new machine, turn on the SSH agent in
+1Password (Settings → Developer → Use the SSH agent), put the key's public half into `~/.extra` as above,
+and add it on GitHub as a **Signing Key** (`gh ssh-key add key.pub --type signing`) so commits show as Verified.
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably
 better to [fork this repository](https://github.com/soerenmartius/awesome-dotfiles/fork) instead, though.
