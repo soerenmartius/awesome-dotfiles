@@ -94,6 +94,7 @@
     }
   },
   "effortLevel": "xhigh",
+  "teammateMode": "auto",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "vim",
