@@ -17,3 +17,9 @@ Thumbs.db
 
 # Dotfiles we don't want to track
 .extra
+
+# Claude Code: only the user settings and custom agents are dotfiles. Everything
+# else under ~/.claude (credentials, sessions, history, plugin cache) is state.
+.claude/*
+!.claude/settings.json
+!.claude/agents/

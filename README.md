@@ -42,6 +42,8 @@ for all SSH keys. tmux windows and running [Claude Code](https://claude.com/clau
 | [.local/bin/tmux-work](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.local/bin/tmux-work)                 | Starts or joins the `work` tmux server and restores the last snapshot after a reboot.              |
 | [.local/bin/claude-resurrect](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.local/bin/claude-resurrect)   | Relaunches a saved Claude Code pane so it resumes its conversation.                                 |
 | [.local/bin/tmux-resurrect-claude-ids](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.local/bin/tmux-resurrect-claude-ids) | Post-save hook that stamps Claude Code panes with their session ID.                      |
+| [.claude/settings.json](https://github.com/soerenmartius/awesome-dotfiles/blob/master/.claude/settings.json)                                 | Claude Code user settings: model, effort, vim keys, permissions, plugins and the to11 hooks.         |
+| [.claude/agents](https://github.com/soerenmartius/awesome-dotfiles/tree/master/.claude/agents)                                               | Custom Claude Code agents for writing and editing Terramate content.                                 |
 | [install-dnssec.sh](https://github.com/soerenmartius/awesome-dotfiles/blob/master/install-dnssec.sh)                       | Optional install script for DNSSEC with dnscrypt and dnsmasq.                                       |
 | [brew.sh](https://github.com/soerenmartius/awesome-dotfiles/blob/master/brew.sh)                                           | Homebrew formulae, casks, fonts and Mac App Store apps installed on my machines.                    |
 | [bootstrap.sh](https://github.com/soerenmartius/awesome-dotfiles/blob/master/bootstrap.sh)                                 | Install script. Copies all dotfiles to your `$HOME` directory and installs zgen and TPM.            |
@@ -183,6 +185,30 @@ Ghostty forwards macOS-style keys to tmux: `Cmd+1` to `Cmd+9` and `Cmd+0` switch
 `Cmd+D` / `Cmd+Shift+D` split, `Cmd+Shift+[` / `]` move between windows. Every pane shows its title above it, which
 for Claude Code is the current conversation summary, and a bell from any window (Claude finishing or waiting for
 input) highlights that window and bounces the dock icon.
+
+### Claude Code
+
+`.claude/settings.json` and `.claude/agents/` are the only parts of `~/.claude` that are configuration; `bootstrap.sh`
+copies them into place like every other dotfile and never deletes anything else there. Credentials, sessions,
+history, agent memory and the plugin cache stay on the machine. Plugins listed under `enabledPlugins` install
+themselves the first time Claude Code starts, and the hooks route traffic through the [to11](https://to11.ai) CLI,
+which `brew.sh` installs.
+
+The skills in `~/.claude/skills` are third-party and are not tracked. They come back with the
+[skills CLI](https://github.com/vercel-labs/skills):
+
+```bash
+npx skills add vercel-labs/skills -g -y
+npx skills add Leonxlnx/taste-skill -g -y
+npx skills add higgsfield-ai/skills -g -y
+```
+
+Machine- or project-specific additions that Claude Code writes into `~/.claude/settings.json` (for example the
+`autoMode` environment block it generates for a repository) are not committed; running `bootstrap.sh` resets the
+file to the version in this repository.
+
+One side effect of mirroring `$HOME`: when Claude Code runs inside this clone, it reads `.claude/` as project
+settings. They duplicate the user settings, so nothing changes.
 
 ### SSH keys in 1Password
 
