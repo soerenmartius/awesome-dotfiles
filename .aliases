@@ -181,4 +181,4 @@ alias vim="/opt/homebrew/bin/nvim"
 
 #alias heic=for i in *.HEIC; do magick convert  '$i' '${i%.*}.jpg"; done
 # Claude without asking for permissions
-alias cc="claude --dangerously-skip-permissions --teammate-mode tmux"
+alias cc="claude --dangerously-skip-permissions"
