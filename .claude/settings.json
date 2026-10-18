@@ -5,7 +5,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5-1",
+  "model": "opus",
   "hooks": {
     "PreToolUse": [
       {
@@ -94,10 +94,10 @@
     }
   },
   "effortLevel": "xhigh",
-  "teammateMode": "auto",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "vim",
-  "skipAutoPermissionPrompt": true,
-  "preferredNotifChannel": "terminal_bell"
+  "preferredNotifChannel": "terminal_bell",
+  "teammateMode": "auto",
+  "skipAutoPermissionPrompt": true
 }

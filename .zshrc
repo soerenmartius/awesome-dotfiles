@@ -146,3 +146,5 @@ claude() {
       command claude --session-id "$(uuidgen | tr '[:upper:]' '[:lower:]')" "$@" ;;
   esac
 }
+
+alias gam="/Users/soerenmartius/bin/gam7/gam"
